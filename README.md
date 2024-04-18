@@ -1,48 +1,52 @@
 # CISC3003-Final-Project
 
-### Project Proposal: Virtual Travel Experience Platform
+### Project Proposal: Comprehensive Event Planning Platform
 
 #### 1. Project Background
-With the advancement of modern technology, more and more people prefer to explore the world online from the comfort of their homes. Especially under the influence of the global pandemic, virtual travel has become a trend. By establishing a virtual travel experience platform, we can not only provide users with a novel online travel experience but also bring new vitality to the tourism industry.
+In today's fast-paced world, efficiently organizing and managing events can be a challenging task. With the rise of digital solutions, an integrated event planning platform can simplify these processes by providing tools to manage invitations, registrations, schedules, and promotions all in one place. This platform would be beneficial not only for event organizers but also for participants seeking a seamless experience.
 
 #### 2. Target Audience
-- Travel enthusiasts, especially those who are temporarily unable to travel in person.
-- Educational institutions, as a teaching aid.
-- Historians and cultural researchers, who can gather information through virtual tours.
+- Event organizers, from corporate event planners to private party planners.
+- Participants who attend various events.
+- Vendors and service providers like caterers, decorators, and venue owners.
 
 #### 3. Key Features
-- **Virtual Tours**: Users can choose different travel destinations and watch high-definition videos and images, experiencing 360-degree panoramic views.
-- **Interactive Experiences**: Through VR (Virtual Reality) technology, users can have more in-depth interactive experiences.
-- **Customized Itineraries**: Users can customize travel routes and activities based on personal preferences.
-- **Community Interaction**: A forum and comment section for users to share experiences and travel tips.
-- **Educational Resources**: Providing relevant historical and cultural background information to enhance educational value.
+- **Event Creation and Management**: Users can create and manage event details such as date, time, location, and agenda.
+- **Registration and Ticketing**: Integrated registration and ticketing system with payment processing.
+- **Schedule Builder**: Tools for building and sharing interactive event schedules.
+- **Vendor Management**: A marketplace for event-related services where organizers can find and book vendors.
+- **Promotional Tools**: Integrated tools for event promotion, including email marketing, social media sharing, and SEO optimization.
+- **Real-time Analytics**: Dashboards to provide real-time insights into registrations, attendance, and revenue.
+- **Feedback and Surveys**: Post-event feedback tools to gather insights and improve future events.
 
-#### 4. Technology Stack
-- **Frontend**: React.js for building user interfaces, Bootstrap for page layout and styling.
-- **Backend**: Node.js + Express for server-side logic, MongoDB for data storage.
-- **APIs**: Google Maps API for map integration, YouTube API for embedding relevant videos.
-- **VR Technology**: Integration of WebVR
+4. Technology Stack
+Frontend: Angular for a dynamic and responsive user interface, with Material Design for a modern look and feel.
+Backend: Django REST framework for a powerful, scalable back-end, with PostgreSQL for database management.
+APIs: Stripe for payment processing, SendGrid for email marketing, and social media APIs for integration with platforms like Facebook and Twitter.
+Analytics: Integration of Google Analytics for tracking and reports.
+5. Expected Outcomes
+This project aims to streamline the process of event planning and management, making it more efficient and less time-consuming for organizers. By providing a comprehensive set of tools in one platform, it also enhances the event experience for participants. Additionally, this platform could serve as a valuable resource for vendors to reach potential clients, thus stimulating business in the event services sector.
+This proposal addresses a real-world need by leveraging modern web technologies to enhance the efficiency and enjoyment of event planning and participation. It is a robust full-stack development project with significant potential for impact in the professional and social event sectors.
 
 
-### 项目提案：虚拟旅游体验平台
+### 项目建议书：综合活动策划平台
 
 #### 1.项目背景
-随着现代技术的进步，越来越多的人喜欢在家中舒适地在线探索世界。特别是在全球疫情的影响下，虚拟旅行已成为一种趋势。通过建立虚拟旅游体验平台，我们不仅可以为用户提供新颖的在线旅游体验，还可以为旅游业带来新的活力。
+在当今快节奏的世界中，有效地组织和管理活动可能是一项具有挑战性的任务。随着数字解决方案的兴起，集成的活动策划平台可以通过提供在一个地方管理邀请、注册、日程安排和促销的工具来简化这些流程。这个平台不仅对活动组织者有益，而且对寻求无缝体验的参与者也有好处。
 
 #### 2.目标受众
-- 旅行爱好者，尤其是那些暂时无法亲自旅行的人。
-- 教育机构，作为教学辅助工具。
-- 历史学家和文化研究人员，他们可以通过虚拟旅游收集信息。
+- 活动组织者，从企业活动策划者到私人派对策划者。
+- 参加各种活动的参与者。
+- 供应商和服务提供商，如餐饮服务商、装饰商和场地所有者。
 
 #### 3.主要特点
-- **虚拟旅游**：用户可以选择不同的旅游目的地，观看高清视频和图像，体验360度全景。
-- **互动体验**：通过VR（虚拟现实）技术，用户可以拥有更深入的互动体验。
-- **定制行程**：用户可根据个人喜好定制旅行路线和活动。
-- **社区互动**：供用户分享体验和旅行提示的论坛和评论区。
-- **教育资源**：提供相关的历史文化背景信息，提升教育价值。
-
+- **活动创建和管理**：用户可以创建和管理活动详细信息，例如日期、时间、地点和议程。
+- **注册和票务**：集成注册和票务系统，并具有付款处理功能。
+- **日程安排生成器**：用于构建和共享交互式活动日程安排的工具。
+- **供应商管理**：一个与活动相关的服务市场，组织者可以在其中查找和预订供应商。
+- **促销工具**：用于活动推广的集成工具，包括电子邮件营销、社交媒体分享和 SEO 优化。
+- **实时分析**：仪表板，用于提供对注册、出勤和收入的实时洞察。
+- **反馈和调查**：事后反馈工具，用于收集见解并改进未来活动。
 #### 4.技术栈
-- **前端**：用于构建用户界面的React.js，用于页面布局和样式的 Bootstrap。
-- **后端**：Node.js + Express 用于服务器端逻辑，MongoDB 用于数据存储。
-- **API：用于地图集成的 Google Maps API，用于嵌入相关视频的 YouTube API。
-- **VR技术**：WebVR的集成
+- **前端**：Angular 提供动态和响应式用户界面，Material Design 提供现代外观和感觉。
+- **后端**：用于强大、可扩展后端的 Django REST 框架，wi
