@@ -31,11 +31,3 @@ Integration with social media platforms to facilitate sharing and word-of-mouth 
 ### 6. Analytics and Reporting:
 Detailed reporting and analytics to gain valuable insights into customer preferences, popular items, and sales performance.
 Integration with third-party analytics tools for comprehensive data analysis.
-
-### 7. Timeline and Deliverables:
-The project will be divided into the following phases:
-- Requirements gathering and system design.
-- Front-end and back-end development.
-- Integration with payment gateways, POS system, and third-party services.
-- Testing, bug fixing, and user acceptance testing (UAT).
-- Deployment and post-launch support.
