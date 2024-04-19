@@ -1,5 +1,5 @@
 # Online Orders Platform
-# Project Overview:
+### Project Overview:
 Our proposed online ordering system will provide an intuitive and user-friendly platform for customers to place orders directly from your restaurant's website or mobile app. The system will seamlessly integrate with your existing infrastructure, ensuring a smooth transition from traditional ordering methods to a modern, efficient digital solution. Here's an overview of the key features and functionalities:
 
 ### 1. User-Friendly Interface:
