@@ -1,0 +1,76 @@
+main {
+    background-color: #fffaf2;
+    padding: 1rem 0.5rem;
+}
+
+form {
+    margin: 1rem 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #9b5f5f;
+}
+
+.flex-container {
+    display: flex;
+    margin: 1rem 0 1.5rem;
+    gap: 2rem
+}
+
+.meal {
+    flex: 1 1 20%;
+    background-color: #ffedd1;
+    border-radius: 1rem;
+    font-family: Verdana, sans-serif;
+    overflow: hidden;
+    transition: transform 200ms ease-in-out;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.meal:hover {
+    transform: scale(1.025);
+}
+
+.meal-img {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.meal-content {
+    margin: 0.75rem 1rem;
+}
+
+.meal-title {
+    color: #9b5f5f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.meal-desc {
+    color: #3d3d3d;
+}
+
+.meal-cart {
+    float: right;
+    vertical-align: middle;
+    margin: 0 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+}
+
+.fa {
+    margin: 0 0.25rem;
+    transition: transform 200ms ease-in-out;
+    color: #ff6200;
+}
+
+.fa:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
