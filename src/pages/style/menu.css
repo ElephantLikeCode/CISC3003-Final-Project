@@ -9,6 +9,10 @@ html, body, header, footer, hgroup, nav, main, article, section, figure, figcapt
 #banner{
     width: 200px;
 }
+a{
+    color: #3D3D3D;
+    text-decoration: #CFCFCF;
+}
 body{
     margin: 0;
     padding: 0;
