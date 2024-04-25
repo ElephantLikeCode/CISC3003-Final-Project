@@ -44,22 +44,23 @@
 
 </div>
 <div class="container" id="phone">
-    <div class="container-form container-signin">
+    <div class="container-form container-signin" id="sign_in">
         <form action="#" class="form" id="form3">
             <h2 class="form-title">Sign in to club</h2>
             <input type="email" placeholder="Email" class="input" />
             <input type="password" placeholder="Password" class="input" />
             <a href="#" class="link">Forget</a>
-            <a href="#" class="link signUp">Create an account</a>
+            <button class="signUp">Create an account</button>
             <button type="button" class="btn">sign in</button>
         </form>
     </div>
-    <div class="container-form container-signup none">
+    <div class="container-form container-signup none" id="sign_up">
         <form action="#" class="form" id="form4">
             <h2 class="form-title">Sign up to club</h2>
             <input type="text" placeholder="User" class="input" />
             <input type="email" placeholder="Email" class="input" />
             <input type="password" placeholder="Password" class="input" />
+            <button class="signIn">Have an account</button>
             <button type="button" class="btn">sign up</button>
         </form>
     </div>
@@ -68,10 +69,18 @@
     const signInBtn=document.querySelector('#signIn')
     const signUpBtn=document.querySelector('#signUp')
     const container=document.querySelector('.container')
-    const container_signin=document.querySelector('.container-signin')
+    const container_signin=document.querySelector('#sign_in')
+    const container_signup=document.querySelector("#sign_up")
     const signUp=document.querySelector('.signUp')
+    const signIn=document.querySelector('.signIn')
     signUp.addEventListener('click',()=>{
         container_signin.classList.add("none")
+        container_signup.classList.remove("none")
+
+    })
+    signIn.addEventListener('click',()=>{
+        container_signin.classList.remove("none")
+        container_signup.classList.add("none")
 
     })
     signInBtn.addEventListener("click",()=>{
