@@ -2,21 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Elephant Fitting Club-Stronger than elephant!</title>
+    <title>Elephant Fitting Club | Stronger than elephant!</title>
+    <link href="style/public.css" type="text/css" rel="stylesheet">
     <link href="style/menu.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
-        <img id="banner" src="images/banner.png" alt="banner">
-        <ul id="topMenu">
-            <li><a>News</a></li>
-            <li><a>Booking</a></li>
-            <li><a>Order</a></li>
-            <li>
-                <a href="login.html">Login</a>
-            </li>
-        </ul>
-    </nav>
+<?php include_once "includes/header.php";?>
     <section>
     <div id='floatText'>
         <img  src="images/hero-text.png" alt="text" style="width: 30vw;filter: opacity(100%)">
@@ -38,10 +29,5 @@
         </div>
     </section>
 </body>
-<footer>
-    <div class="center">
-        <h4>CISC3003-PAIR-03</h4>
-    </div>
-
-</footer>
+    <?php include_once "includes/footer.php";?>
 </html>

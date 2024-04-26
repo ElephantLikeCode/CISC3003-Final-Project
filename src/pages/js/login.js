@@ -40,11 +40,12 @@ forms.forEach((form) => {
                     alert('Email already registered.');
                 } else if (loginResult === 3) {
                     alert('Wrong account password.');
-                } else {
+                }
+                else {
                     alert('Email not registered.');
                 }
             }
-        };
-        xhr.send(formData);
+    };
+    xhr.send(formData);
     });
 });
