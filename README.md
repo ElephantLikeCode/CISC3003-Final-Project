@@ -1,4 +1,4 @@
-# Meal Ordering System
+# PLATFORM FOR HEALTH CLUBS
 ### 1. Meal ordering system (fitness nutritional meals)
 - Menu Browsing: Users can browse the details of various fitness and nutritional meals, including ingredients, nutritional content and price.
 - Online ordering: Users can select meals, add them to the shopping cart and make online payment.
