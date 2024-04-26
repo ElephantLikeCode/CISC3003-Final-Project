@@ -10,24 +10,24 @@
 <div class="container" id="pc">
     <!-- 注册 -->
     <div class="container-form container-signup">
-        <form action="#" class="form" id="form1">
+        <form action="login.php" class="form" id="form1" method="post" novalidate>
             <h2 class="form-title">Sign up to club</h2>
-            <input type="text" placeholder="User" class="input" />
-            <input type="email" placeholder="Email" class="input" />
-            <input type="password" placeholder="Password" class="input" />
-            <button type="button" class="btn">sign up</button>
+            <input type="text" placeholder="User" class="input" name="User"/>
+            <input type="email" placeholder="Email" class="input" name="Email"/>
+            <input type="password" placeholder="Password" class="input" name="Password"/>
+            <button type="submit" class="btn">sign up</button>
         </form>
     </div>
 
 
     <!-- 登录 -->
     <div class="container-form container-signin">
-        <form action="#" class="form" id="form2">
+        <form action="login.php" class="form" id="form2" method="post" novalidate>
             <h2 class="form-title">Sign in to club</h2>
-            <input type="email" placeholder="Email" class="input" />
-            <input type="password" placeholder="Password" class="input" />
+            <input type="email" placeholder="Email" class="input" name="Email"/>
+            <input type="password" placeholder="Password" class="input" name="Password"/>
             <a href="#" class="link">Forget</a>
-            <button type="button" class="btn">sign in</button>
+            <button type="submit" class="btn">sign in</button>
         </form>
     </div>
     <!-- 叠加层部分 -->
@@ -45,50 +45,26 @@
 </div>
 <div class="container" id="phone">
     <div class="container-form container-signin" id="sign_in">
-        <form action="#" class="form" id="form3">
+        <form action="login.php" class="form" id="form3" method="post" novalidate>
             <h2 class="form-title">Sign in to club</h2>
-            <input type="email" placeholder="Email" class="input" />
-            <input type="password" placeholder="Password" class="input" />
+            <input type="email" placeholder="Email" class="input" name="Email"/>
+            <input type="password" placeholder="Password" class="input" name="Password"/>
             <a href="#" class="link">Forget</a>
-            <button class="signUp">Create an account</button>
-            <button type="button" class="btn">sign in</button>
+            <button class="signUp" type="button">Create an account</button>
+            <button type="submit" class="btn">sign in</button>
         </form>
     </div>
     <div class="container-form container-signup none" id="sign_up">
-        <form action="#" class="form" id="form4">
+        <form action="login.php" class="form" id="form4" method="post" novalidate>
             <h2 class="form-title">Sign up to club</h2>
-            <input type="text" placeholder="User" class="input" />
-            <input type="email" placeholder="Email" class="input" />
-            <input type="password" placeholder="Password" class="input" />
-            <button class="signIn">Have an account</button>
-            <button type="button" class="btn">sign up</button>
+            <input type="text" placeholder="User" class="input" name="User"/>
+            <input type="email" placeholder="Email" class="input" name="Email"/>
+            <input type="password" placeholder="Password" class="input" name="Password"/>
+            <button class="signIn" type="button">Have an account</button>
+            <button type="submit" class="btn">sign up</button>
         </form>
     </div>
 </div>
-<script>
-    const signInBtn=document.querySelector('#signIn')
-    const signUpBtn=document.querySelector('#signUp')
-    const container=document.querySelector('.container')
-    const container_signin=document.querySelector('#sign_in')
-    const container_signup=document.querySelector("#sign_up")
-    const signUp=document.querySelector('.signUp')
-    const signIn=document.querySelector('.signIn')
-    signUp.addEventListener('click',()=>{
-        container_signin.classList.add("none")
-        container_signup.classList.remove("none")
-
-    })
-    signIn.addEventListener('click',()=>{
-        container_signin.classList.remove("none")
-        container_signup.classList.add("none")
-
-    })
-    signInBtn.addEventListener("click",()=>{
-        container.classList.remove("panel-active")
-    })
-    signUpBtn.addEventListener("click",()=>{
-        container.classList.add("panel-active")
-    })
-</script>
+<script src="js/login.js"></script>
 </body>
 </html>
