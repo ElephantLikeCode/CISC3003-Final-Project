@@ -18,8 +18,7 @@ if (count($_POST) == 3){
     if (mysqli_query($conn, $signup)) {
         $accountInfo=$_POST;
         setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
-        $loginResult=1;
-        exit();//注册成功，将账户信息存入cookie，导向主页面
+        $loginResult=1;//注册成功，将账户信息存入cookie，导向主页面
     } else {
         $loginResult = 2;//邮箱已注册
     }
@@ -40,8 +39,7 @@ else{
         if ($storedPassword == $password){
             $accountInfo = $row;
             setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
-            $loginResult=5;
-            exit();//登录成功，储存cookie，导向主页面
+            $loginResult=5;//登录成功，储存cookie，导向主页面
         }else{
             $loginResult=3;//密码错误
         }

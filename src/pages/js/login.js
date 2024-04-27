@@ -42,10 +42,10 @@ forms.forEach((form) => {
                     alert('Wrong account password.');
                 }
                 else if (loginResult === 1) {
-                    window.location.href="menu.php";
+                    window.location.href = 'menu.php';
                 }
                 else if (loginResult === 5) {
-                    window.location.href="menu.php";
+                    window.location.href = 'menu.php';
                 }
                 else {
                     alert('Email not registered.');
