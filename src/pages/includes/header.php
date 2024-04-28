@@ -1,11 +1,20 @@
-<nav class="nav">
-    <a href="menu.php">
-        <img id="banner" src="images/banner.png" alt="banner">
-    </a>
-    <ul id="topMenu">
-        <li><a>News</a></li>
-        <li><a>Booking</a></li>
-        <li><a href="order.php">Order</a></li>
-        <li><a href="login.html">Login</a></li>
-    </ul>
-</nav>
+<header class="header">
+    <nav class="nav">
+        <a href="menu.php">
+            <img id="logo" src="images/banner.png" alt="banner">
+        </a>
+        <div id="topMenu">
+            <span class="hide-for-mobile"><a href="#">News</a></span>
+            <span class="hide-for-mobile"><a href="#">Booking</a></span>
+            <span class="hide-for-mobile"><a href="order.php">Order</a></span>
+            <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-for-mobile">Cart</span></a></span>
+            <span><a href="login.html"><i class="fa fa-user-circle" aria-hidden="true"></i><span class="hide-for-mobile">Login</span></a></span>
+            
+            <a href="#" id="btnHamburger" class="header-toggle hide-for-desktop">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </a>
+        </div>
+    </nav>
+</header>
