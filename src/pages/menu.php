@@ -22,7 +22,7 @@
             <img src="images/fittness.jpg" style="height: 50vh;margin: 5%">
             <div class="col center" style="max-width: 60vw">
                 <h1 class="xxxLarge bold" style="margin-bottom: 5%; color: #9B5F5F">Fitness, a way of life</h1>
-                <div class="intro">
+                <div class="intro-content">
                     <p>
                         Fitness, a way of life, transcends the boundaries of mere physical exercise and becomes a holistic approach to well-being.
                     </p>
