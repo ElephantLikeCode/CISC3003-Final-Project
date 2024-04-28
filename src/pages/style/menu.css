@@ -4,7 +4,7 @@
 #floatText{
     z-index: 100;
     position: absolute;
-    top:30%;
+    top: 30%;
     left: 10%;
     padding: 0.5% 0.1%;
     background-color: #CFCFCF;
@@ -24,8 +24,38 @@
     flex-wrap: wrap;
 }
 .xxxLarge{
-    font-size: xxx-large;
+    font-size: 3.5rem;
 }
+.intro {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+.intro p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+@media (max-width: 63.9375em) {
+    .xxxLarge{
+        font-size: 3rem;
+    }
+    .intro {
+        font-size: 1.125rem;
+    }
+    .intro p:not(:last-child) {
+        margin-bottom: 0.75rem;
+    }
+}
+@media (max-width: 39.9375em) {
+    .xxxLarge{
+        font-size: 2.5rem;
+    }
+    .intro {
+        font-size: 1rem;
+    }
+    .intro p:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}
+
 .bold{
     font-weight: bold;
 }

@@ -6,9 +6,6 @@ html, body, header, footer, hgroup, nav, main, article, section, figure, figcapt
     vertical-align: baseline;
     border: 0;
 }
-#banner{
-    width: 200px;
-}
 a{
     color: #3D3D3D;
     text-decoration: #CFCFCF;
@@ -17,28 +14,24 @@ body{
     margin: 0;
     padding: 0;
     background-color: #CFCFCF;
+    font-family: "Maven Pro", sans-serif;
 }
-nav li {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline;
-    width: fit-content;
+@media (min-width: 64em) {
+    .hide-for-desktop {
+      display: none;
+    }
 }
-nav ul{
-    display: flex ;
-    flex-wrap: wrap;
-    align-content: center;
+@media (max-width: 63.9375em) {
+    .hide-for-mobile {
+        display: none;
+    }
+}
 
-}
-.topMenu{
-    margin: 0 !important;
-    flex-flow: row;
-    width: fit-content;
-    display: flex !important;
-
+/*CSS for header navigation bar*/
+#logo{
+    height: 60px;
 }
 .nav{
-    font-weight: bold;
     font-size: large;
     display: flex;
     justify-content: space-between;
@@ -47,6 +40,61 @@ nav ul{
     color: #3D3D3D;
     background:#CFCFCF;
 }
+#topMenu{
+    margin: 0 !important;
+    flex-flow: row;
+    width: fit-content;
+    display: flex !important;
+    align-items: center;
+}
+#topMenu > span {
+    margin: 0 1rem;
+}
+@media (max-width: 64em) {
+    #topMenu > span {
+        margin-right: 0.5rem;
+    }
+}
+#topMenu i{
+    color: #3d3d3d;
+    margin-right: 0.375rem;
+}
+#topMenu span a {
+    transition: font-weight 200ms ease-in-out;
+}
+#topMenu span a:hover{
+    font-weight: 700;
+}
+
+/*CSS for hamburger button*/
+.header-toggle > span {
+	background-color: #3d3d3d;
+  	display: block;
+  	width: 1.625rem;
+  	height: 0.15rem;
+    margin: 0 1rem;
+  	border-radius: 0.1rem;
+  	transition: all 300ms ease-in-out;
+  	transform-origin: 4px 1px;
+}
+
+.header.open .header-toggle > span:first-child {
+	transform: rotate(45deg);
+}
+
+.header.open .header-toggle > span:nth-child(2) {
+	opacity: 0;
+}
+
+.header.open .header-toggle > span:last-child {
+	transform: rotate(-45deg);
+}
+
+.header-toggle > span:not(:last-child){
+	margin-bottom: 0.25rem;
+}
+
+/*CSS for footer*/
 footer{
     display: flex;
     justify-content: center;
