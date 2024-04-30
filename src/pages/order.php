@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
+    session_start();
     include "includes/mealOrder.php";
 
     //Connect to the database
     $servername = "localhost";
     $username = "root";
-    $password = ""; //Your database password
+    $password = "sqHinL_2003717"; //Your database password
 
     $database = new mysqli($servername, $username, $password);
 
@@ -16,8 +15,17 @@
 
     $meals = readMeals($database);
 
+    for ($i = 0; $i < count($meals); $i++) {
+        if(!isset($_SESSION["cart"]["meal".$i])) {
+            $_SESSION["cart"]["meal".$i] = 0;
+        }
+    }
+
     $database->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,13 +34,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>Elephant Fitting Club | Order Menu</title>
 </head>
 <body>
     <?php include "includes/header.php";?>
     <main>
-        <form>
-        <section class="order">
+        <form id="orderForm" method="post" action="cart.php">
+        <div>
             <h2>Meal Order</h2>
             <?php
                 if (count($meals)%4 == 0) {
@@ -46,16 +56,48 @@
                     meal_display_row($i * 4, $meals);
                 }
             ?>
-        </section>
-        <?php 
-            for ($i = 0; $i < count($meals); $i++) {
-                echo "<input type='hidden' class='mealNum' name='".($i+1)." 'value='0'>";
-            }
-        ?>
+        </div>
+        <div class="addCart">
+            <input id="resetBtn" class="formBtn" type="reset" value="Reset Cart">
+            <input class="formBtn" type="submit" value="Add to Cart">
+        </div>
         </form>
     </main>
+
     <?php include "includes/footer.php";?>
 
-    <script src="js/order.js"></script>
+    <script>
+        $("#resetBtn").click(function(){
+            $(".order").val(0);
+            $.ajax({
+                type: "POST",
+                url: "includes/updateCart.php",
+                data: $("#orderForm").serialize(),
+                success: function() {
+                    $(".order").val(0);
+                }
+            })
+        });
+
+        $(".addBtn").click(function(){
+            var num = parseInt($(this).prev().val()) + 1;
+            $(this).prev().val(num);
+            $.ajax({
+                type: "POST",
+                url: "includes/updateCart.php",
+                data: $("#orderForm").serialize()
+            })
+        })
+
+        $(".dropBtn").click(function(){
+            var num = parseInt($(this).next().val()) - 1;
+            $(this).next().val(num);
+            $.ajax({
+                type: "POST",
+                url: "includes/updateCart.php",
+                data: $("#orderForm").serialize()
+            })
+        })
+    </script>
 </body>
 </html>

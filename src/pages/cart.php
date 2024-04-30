@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,13 @@
     <title>Elephant Fitting Club | Shopping Cart</title>
 </head>
 <body>
-    <?php include "inlucdes/header.php"?>
-    <?php include "inlucdes/footer.php"?>
+    <?php include "includes/header.php";?>
+    <?php 
+        for($i = 0; $i < count($_POST); $i ++) {
+            $_SESSION["meal".$i] = $_POST["meal".$i];
+        }
+        print_r($_SESSION);
+    ?>
+    <?php include "includes/footer.php";?>
 </body>
 </html>
