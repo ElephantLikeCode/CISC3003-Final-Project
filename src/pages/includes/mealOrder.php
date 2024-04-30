@@ -15,9 +15,9 @@ function meal_display_single($i, $meals) {
             "</div>
         </div>
         <div class='meal-cart'>
-            <i class='fa fa-minus-circle' aria-hidden='true'></i>
-            <input type='number' id='".$i."' name='meal-count' min='0' value='0'>
-            <i class='fa fa-plus-circle' aria-hidden='true'></i>
+            <i class='fa fa-minus-circle dropBtn' aria-hidden='true'></i>
+            <input type='number' id='".$i."' class='order' name='meal".$i."' min='0' max='99' value='".$_SESSION["cart"]["meal".$i]."'>
+            <i class='fa fa-plus-circle addBtn' aria-hidden='true'></i>
         </div>
     </div>
     ";
