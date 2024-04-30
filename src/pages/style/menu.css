@@ -1,77 +1,14 @@
-html, body, header, footer, hgroup, nav, main, article, section, figure, figcaption, h1, h2, h3,h4, ul, li, body, div, p, img
-{
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    border: 0;
-}
-#banner{
-    width: 200px;
-}
-a{
-    color: #3D3D3D;
-    text-decoration: #CFCFCF;
-}
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #CFCFCF;
-}
-nav li {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline;
-    width: fit-content;
-}
-nav ul{
-    display: flex ;
-    flex-wrap: wrap;
-    align-content: center;
-
-}
-.topMenu{
-    margin: 0 !important;
-    flex-flow: row;
-    width: fit-content;
-    display: flex !important;
-
-}
-.nav{
-    font-weight: bold;
-    font-size: large;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    margin: 0;
-    color: #3D3D3D;
-    background:#CFCFCF;
-}
 #hero{
-    width: 100vw;
+    width: 100%;
 }
 #floatText{
     z-index: 100;
     position: absolute;
-    top:30%;
+    top: 30%;
     left: 10%;
     padding: 0.5% 0.1%;
     background-color: #CFCFCF;
     filter: opacity(95%);
-}
-footer{
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    margin: 0;
-    color: #CFCFCF;
-    background:#3D3D3D;
-}
-.center{
-    display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 #media{
     height: 3em;
@@ -80,6 +17,7 @@ footer{
     flex-flow: column;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 .row{
     flex-flow: row;
@@ -87,8 +25,38 @@ footer{
     flex-wrap: wrap;
 }
 .xxxLarge{
-    font-size: xxx-large;
+    font-size: 3.5rem;
 }
+.intro {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+.intro p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+@media (max-width: 63.9375em) {
+    .xxxLarge{
+        font-size: 3rem;
+    }
+    .intro-content {
+        font-size: 1.125rem;
+    }
+    .intro-content p:not(:last-child) {
+        margin-bottom: 0.75rem;
+    }
+}
+@media (max-width: 39.9375em) {
+    .xxxLarge{
+        font-size: 2.5rem;
+    }
+    .intro-content {
+        font-size: 1rem;
+    }
+    .intro-content p:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}
+
 .bold{
     font-weight: bold;
 }
