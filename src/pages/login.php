@@ -47,7 +47,7 @@ if (count($_POST) == 4){
         $accountInfo=$_POST;
         setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
         header('Location: index.php');
-        exit();//注册成功，将账户信息存入cookie，导向主页面
+        $loginResult=5;//注册成功，将账户信息存入cookie，导向主页面
     } else {
         $loginResult = 2;//邮箱已注册
     }
@@ -68,8 +68,8 @@ else{
         if ($storedPassword == $password){
             $accountInfo = $row;
             setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
-            header('Location: index.php');
-            exit();//登录成功，储存cookie，导向主页面
+            $loginResult=1;
+            //登录成功，储存cookie，导向主页面
         }else{
             $loginResult=3;//密码错误
         }

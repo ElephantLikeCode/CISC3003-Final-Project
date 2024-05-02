@@ -60,19 +60,9 @@ forms.forEach((form) => {
 
         const clickedButton = event.target.querySelector('button[type="submit"]:focus');
 
-<<<<<<< Updated upstream
-                // 在 HTML 页面中进行显示
-                if (loginResult === 2) {
-                    alert('Email already registered.');
-                } else if (loginResult === 3) {
-                    alert('Wrong account password.');
-                } else {
-                    alert('Email not registered.');
-                }
-            }
-        };
-        xhr.send(formData);
-=======
+
+
+
         if (clickedButton.id==="send"||clickedButton.id==="send1") {
             const formData = new FormData(form);
             const xhr = new XMLHttpRequest();
@@ -123,10 +113,10 @@ forms.forEach((form) => {
                         showup('Wrong verification code.');
                     }
                     else if (loginResult === 1) {
-                        window.location.href = 'menu.php';
+                        window.location.href = 'index.php';
                     }
                     else if (loginResult === 5) {
-                        window.location.href = 'menu.php';
+                        window.location.href = 'index.php';
                     }
                     else {
                         showup('Email not registered.');
@@ -135,7 +125,7 @@ forms.forEach((form) => {
             };
             xhr.send(formData);
         }
->>>>>>> Stashed changes
+
     });
 });
 
