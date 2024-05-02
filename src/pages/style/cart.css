@@ -1,3 +1,95 @@
+/* CSS for payment selection block */
+body.paying {
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    visibility: hidden;
+}
+
+body.paying .overlay {
+    visibility: visible;
+}
+
+.paymentSelect {
+    position: fixed;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    font-size: 1.25rem;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    z-index: 2;
+    visibility: hidden;
+}
+
+body.paying .paymentSelect {
+    visibility: visible;
+}
+
+.pay, .credit-pay {
+    color: #202020;
+    background-color: #ff6200;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    transition: transform 200ms ease-in-out;
+}
+
+.pay:hover, .credit-pay:hover {
+    transform: scale(1.015);
+}
+
+.pay:active, .credit-pay:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+.pay {
+    margin-bottom: 0.75rem;
+}
+
+.credit-pay {
+    margin-bottom: 1.5rem
+}
+
+.backBtn {
+    display: block;
+    color: #202020;
+    background-color: #ff6200;
+    width: 10rem;
+    height: 2.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    line-height: 2.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.backBtn:hover {
+    transform: scale(1.015);
+}
+
+.backBtn:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+/* CSS for payment table */
 .paymentDisplay {
     background-color: #fffaf2;
     padding: 1.5rem 3.5rem;
@@ -161,7 +253,6 @@ tfoot:before {
 @media (max-width: 40em) {
     tfoot:before {
         width: 45%;
-        transform: translateX(-12.5%);
     }
 }
 

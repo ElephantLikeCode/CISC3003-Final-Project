@@ -44,6 +44,9 @@ body{
 }
 
 /*CSS for header navigation bar*/
+header {
+	position: relative;
+}
 #logo{
     height: 60px;
 }

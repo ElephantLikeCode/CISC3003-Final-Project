@@ -40,6 +40,15 @@
 </head>
 <body>
     <?php include "includes/header.php";?>
+    
+    <div class="overlay"></div>
+    <section class="paymentSelect">
+        <a href="#" class="pay">Mpay</a>
+        <a href="#" class="pay">WeChat Pay</a>
+        <a href="#" class="pay">Alipay</a>
+        <a href="#" class="credit-pay">Credit Card</a>
+        <a href="#" class="backBtn">Back to Cart</a>
+    </section>
 
     <section class="paymentDisplay">
         <h2 class="pageTitle">Shopping Cart</h2>
@@ -47,35 +56,56 @@
             <?php displayPayment($meals);?>
             <div class="buttonList">
                 <a href="order.php" id="backBtn" class="formBtn">Back to Order</a>
-                <a id="confirmBtn" class="formBtn">Confirm</a>
+                <a href="#" id="confirmBtn" class="formBtn">Confirm</a>
             </div>
         </form>
     </section>
     <?php include "includes/footer.php";?>
     <script>
         $("#confirmBtn").click(function(event){
+            event.preventDefault();
+
             var total = $("input[name='total']").serialize();
             const accountInfo = document.cookie.indexOf("; accountInfo=");
 
+            //Prevent non-login user submit order
             if (accountInfo == -1) {
                 alert("Please log in before you submit your order.")
                 return false;
             }
 
+            //Prevent users submit empty order
             if (total == "") {
                 alert("Your shopping cart is empty.");
                 return false;
             }
 
+            $("body").addClass("paying");
+        });
+
+        $(".pay").click(function(event){
+            event.preventDefault();
+            $("#paymentForm").submit();
+
+            var total = $("input[name='total']").serialize();
+            const accountInfo = document.cookie.indexOf("; accountInfo=");
+
+            //Post the order to payment.php
             $.ajax({
                 type: "POST",
                 url: "includes/payment.php",
                 data: $("#paymentForm").serialize(),
                 success: function() {
-                    alert($("#paymentForm").serialize());
+                    alert("Payment Success");
+                    window.location.reload(true);
                 }
-            })
+            });
         });
+
+        $(".backBtn").click(function(event){
+            event.preventDefault();
+            $("body").removeClass("paying");
+        })
     </script>
 </body>
 </html>
