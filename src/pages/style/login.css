@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 *{
     margin:0;
     padding: 0;
 }
+
 body{
     height: 100vh;
     background: #e7e7e7 url("../images/login_background.jpg") center no-repeat fixed;
@@ -148,13 +157,13 @@ body{
     .container-signin{
         left: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 0;
     }
     .container-signup{
         left:0;
         opacity: 1;
         width: 100%;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -184,6 +193,138 @@ body{
 }
 .panel-active .container-signup{
     opacity: 1;
-    z-index: 5;
+    z-index: 6;
     transform: translateX(100%);
+}
+
+
+
+
+.popup{
+    position: absolute;
+    left: 50%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    top: -150%;
+    max-width: 380px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0s 0.2s ease-in-out,
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+.popup.show{
+    top: 50%;
+    opacity: 1;
+    z-index: 500;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0s 0s ease-in-out,
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+
+}
+.popup :is(header, .icons, .field){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popup header{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebedf9;
+}
+header span{
+    font-size: 21px;
+    font-weight: 600;
+}
+header .close, .icons a{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+header .close{
+    color: #878787;
+    font-size: 17px;
+    background: #f2f3fb;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+header .close:hover{
+    background: #ebedf9;
+}
+.popup .content{
+    margin: 20px 0;
+}
+.popup .icons{
+    margin: 15px 0 20px 0;
+}
+.content p{
+    font-size: 16px;
+}
+.content .icons a{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.icons a i{
+    transition: transform 0.3s ease-in-out;
+}
+
+.icons a:hover{
+    color: #fff;
+    border-color: transparent;
+}
+.icons a:hover i{
+    transform: scale(1.2);
+}
+.content .field{
+    margin: 12px 0 -5px 0;
+    height: 45px;
+    border-radius: 4px;
+    padding: 0 5px;
+    border: 1px dashed #e1e1e1;
+}
+/* 遮罩层样式 */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色 */
+    z-index: 499; /* 确保遮罩层在弹窗下方 */
+}
+
+.send{
+    text-align: center;
+    width: 30%;
+
+    padding: 0 0 0 0;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-bottom: 8px;
+}
+
+.send.disabled {
+    background-color: #ccc; /* 禁用后按钮颜色 */
+    cursor: not-allowed;
+}
+
+.code{
+    width: 70%;
+
+}
+
+.field{
+    display: flex;
+    width: 100%;
 }

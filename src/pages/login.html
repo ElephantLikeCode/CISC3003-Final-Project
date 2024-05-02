@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 </head>
 <body>
+<div class="popup" id="popup">
+    <header>
+        <p></p>
+        <div class="close"><i class="uil uil-times"></i></div>
+    </header>
+    <div class="content">
+        <p style="text-align:center;"><img src="images/warning.webp" alt="" style="width:50px;"></p>
+
+        <p id="result" style="margin-top: 20px; text-align: center;"></p>
+
+    </div>
+</div>
+<div id="popup-overlay" class="none"></div>
 <div class="container" id="pc">
     <!-- 注册 -->
     <div class="container-form container-signup">
@@ -15,6 +30,10 @@
             <input type="text" placeholder="User" class="input" name="User"/>
             <input type="email" placeholder="Email" class="input" name="Email"/>
             <input type="password" placeholder="Password" class="input" name="Password"/>
+            <div class="field">
+                <input type="password" placeholder="Verification Code" class="input code" name="vt"/>
+                <button id="send" class="btn send" type="submit">Send</button>
+            </div>
             <button type="submit" class="btn">sign up</button>
         </form>
     </div>
@@ -43,6 +62,7 @@
     </div>
 
 </div>
+
 <div class="container" id="phone">
     <div class="container-form container-signin" id="sign_in">
         <form action="login.php" class="form" id="form3" method="post" novalidate>
@@ -60,11 +80,16 @@
             <input type="text" placeholder="User" class="input" name="User"/>
             <input type="email" placeholder="Email" class="input" name="Email"/>
             <input type="password" placeholder="Password" class="input" name="Password"/>
+            <div class="field">
+                <input type="password" placeholder="Verification Code" class="input code" name="vt"/>
+                <button id="send1" class="btn send" type="submit">Send</button>
+            </div>
             <button class="signIn" type="button">Have an account</button>
             <button type="submit" class="btn">sign up</button>
         </form>
     </div>
 </div>
+
 <script src="js/login.js"></script>
 </body>
 </html>

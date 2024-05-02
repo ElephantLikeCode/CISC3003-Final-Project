@@ -7,12 +7,40 @@ $dbname = "login_system";
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 $loginResult=1;
+session_start();
 
-if (count($_POST) == 3){
+foreach ($_POST as $key => $value) {
+    if (empty($value)) {
+        $loginResult = 0;
+        echo json_encode(['loginResult' => $loginResult]);
+        exit();
+    }
+}
+
+if (!filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL)) {
+    $loginResult = 6;
+    echo json_encode(['loginResult' => $loginResult]);
+    exit();
+}
+
+
+if (count($_POST) == 4){
     $user_name=$_POST["User"];
     $password=$_POST["Password"];
     $Email=$_POST["Email"];
+    $vt=$_POST["vt"];
 
+    if(!isset($_SESSION['vt'])){
+        $loginResult = 7;
+        echo json_encode(['loginResult' => $loginResult]);
+        exit();
+    }
+
+    if ($vt!=$_SESSION["vt"]){
+        $loginResult=7;
+        echo json_encode(['loginResult' => $loginResult]);
+        exit();
+    }
     $signup = "INSERT INTO user (Email, user_name, password) VALUES ('".$Email."', '".$user_name."','".$password."')";
 
     if (mysqli_query($conn, $signup)) {
