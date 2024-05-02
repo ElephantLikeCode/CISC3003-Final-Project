@@ -5,7 +5,7 @@
     //Connect to the database
     $servername = "localhost";
     $username = "root";
-    $password = "sqHinL_2003717"; //Your database password
+    $password = "sqHinL_2003717"; //Your database password here
 
     $database = new mysqli($servername, $username, $password);
 
@@ -13,6 +13,7 @@
         die("Connection failed: " . $database->connect_error);
     }
 
+    //Read meals menu from the database
     $meals = readMeals($database);
 
     for ($i = 0; $i < count($meals); $i++) {
@@ -53,13 +54,13 @@
                 }
 
                 for ($i = 0; $i < $rows_num; $i++) {
-                    meal_display_row($i * 4, $meals);
+                    mealDisplayRow($i * 4, $meals);
                 }
             ?>
         </div>
         <div class="addCart">
-            <input id="resetBtn" class="formBtn" type="reset" value="Reset Cart">
-            <input class="formBtn" type="submit" value="Add to Cart">
+            <a id="resetBtn" class="formBtn">Clear Cart</a>
+            <a href="cart.php" id="submitBtn" class="formBtn">Add to Cart</a>
         </div>
         </form>
     </main>

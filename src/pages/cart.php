@@ -1,5 +1,26 @@
 <?php 
     session_start();
+    include "includes/mealOrder.php";
+
+    //Connect to the database
+    $servername = "localhost";
+    $username = "root";
+    $password = "sqHinL_2003717"; //Your database password here
+
+    $database = new mysqli($servername, $username, $password);
+
+    if ($database->connect_error) {
+        die("Connection failed: " . $database->connect_error);
+    }
+
+    //Read meals menu from the database
+    $meals = readMeals($database);
+
+    for ($i = 0; $i < count($meals); $i++) {
+        if(!isset($_SESSION["cart"]["meal".$i])) {
+            $_SESSION["cart"]["meal".$i] = 0;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,16 +33,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>Elephant Fitting Club | Shopping Cart</title>
 </head>
 <body>
     <?php include "includes/header.php";?>
-    <?php 
-        for($i = 0; $i < count($_POST); $i ++) {
-            $_SESSION["meal".$i] = $_POST["meal".$i];
-        }
-        print_r($_SESSION);
-    ?>
+
+    <section class="paymentDisplay">
+        <h2 class="pageTitle">Shopping Cart</h2>
+        <form id="paymentForm" method="post" action="payment.php">
+            <?php displayPayment($meals);?>
+            <div class="buttonList">
+                <a href="order.php" id="backBtn" class="formBtn">Back to Order</a>
+                <input id="confirmBtn" type="submit" class="formBtn" value="Confirm">
+            </div>
+        </form>
+    </section>
     <?php include "includes/footer.php";?>
+    <script>
+        $("#confirmBtn").click(function(event){
+            var total = $("input[name='total']").serialize();
+            if (total == "") {
+                alert("Your shopping cart is empty.");
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
