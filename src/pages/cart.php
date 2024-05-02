@@ -55,6 +55,13 @@
     <script>
         $("#confirmBtn").click(function(event){
             var total = $("input[name='total']").serialize();
+            const accountInfo = document.cookie.indexOf("; accountInfo=");
+
+            if (accountInfo == -1) {
+                alert("Please log in before you submit your order.")
+                return false;
+            }
+
             if (total == "") {
                 alert("Your shopping cart is empty.");
                 return false;
