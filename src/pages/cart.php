@@ -42,12 +42,46 @@
     <?php include "includes/header.php";?>
     
     <div class="overlay"></div>
-    <section class="paymentSelect">
-        <a href="#" class="pay">Mpay</a>
-        <a href="#" class="pay">WeChat Pay</a>
-        <a href="#" class="pay">Alipay</a>
-        <a href="#" class="credit-pay">Credit Card</a>
-        <a href="#" class="backBtn">Back to Cart</a>
+    <section class="selectBox">
+        <div class="paymentSelect">
+            <h2 class="selectMethod">Select a Payment Method</h2>
+            <a href="#" class="pay">Mpay</a>
+            <a href="#" class="pay">WeChat Pay</a>
+            <a href="#" class="pay">Alipay</a>
+            <a href="#" class="credit-pay">Credit Card</a>
+            <a href="#" class="backBtn">Back to Cart</a>
+        </div>
+    </section>
+
+    <section class="useCredit">
+        <form class="creditForm" method="post" action="includes/payment.php">
+            <h2 class="selectMethod">Credit Card Payment</h2>
+            <div class="creditCompany">
+                <img src="images/credit1.png" alt="">
+                <img src="images/credit2.jpg" alt="">
+                <img src="images/credit3.jpg" alt="">
+            </div>
+            <label>Name on Card</label>
+            <input type="text" name="holderName" placeholder="CHAN TAI MAN" required>
+            <label>Card Number</label>
+            <input type="number" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+            <div class="row">
+                <div class="month">
+                    <label>Month</label>
+                    <input type="number" name="month" placeholder="MM" required>
+                </div>
+                <div class="year">
+                    <label>Year</label>
+                    <input type="number" name="year" placeholder="YY" required>
+                </div>
+                <div class="csc">
+                    <label>CSC</label>
+                    <input type="text" name="csc" placeholder="000" required>
+                </div>
+            </div>
+            <input type="submit" class="creditPayBtn" value="Confirm">
+            <a href="#" class="creditBackBtn">Back</a>
+        </form>
     </section>
 
     <section class="paymentDisplay">
@@ -60,6 +94,7 @@
             </div>
         </form>
     </section>
+
     <?php include "includes/footer.php";?>
     <script>
         $("#confirmBtn").click(function(event){
@@ -80,9 +115,13 @@
                 return false;
             }
 
-            $("body").addClass("paying");
+            $(".overlay").removeClass("slide-up");
+            $(".overlay").addClass("slide-down");
+            $(".paymentSelect").removeClass("contract");
+            $(".paymentSelect").addClass("expand");
         });
 
+        //Start the payment procedure
         $(".pay").click(function(event){
             event.preventDefault();
             $("#paymentForm").submit();
@@ -102,9 +141,88 @@
             });
         });
 
+        $(".credit-pay").click(function(event){
+            event.preventDefault();
+            $(".creditForm").removeClass("contract");
+            $(".creditForm").addClass("expand");
+            $(".paymentSelect").removeClass("expand");
+            $(".paymentSelect").addClass("contract");
+        })
+        
+        //Close the payment selection block
         $(".backBtn").click(function(event){
             event.preventDefault();
-            $("body").removeClass("paying");
+            $(".overlay").removeClass("slide-down");
+            $(".overlay").addClass("slide-up");
+            $(".paymentSelect").removeClass("expand");
+            $(".paymentSelect").addClass("contract");
+        })
+
+        //Validate the information on the credit card payment form
+        $(".creditPayBtn").click(function(event){
+            event.preventDefault();
+
+            var total = $("input[name='total']").serialize();
+            const accountInfo = document.cookie.indexOf("; accountInfo=");
+
+            var flag = true;
+            var wrong = "";
+            const name = $("input[name='cardNumber']").val();
+            if (name.length < 1) {
+                flag = false;
+                wrong += "Invalid Name on Card.\n";
+            }
+
+            const num = $("input[name='cardNumber']").val();
+            if (num.toString().length != 16) {
+                flag = false;
+                wrong += "Invalid Card Number.\n";
+            }
+
+            const month = $("input[name='month']").val();
+            if (month < 1 || month > 12) {
+                flag = false;
+                wrong += "Invalid Month.\n";
+            }
+
+            const date = new Date();
+            const currentYear = date.getFullYear();
+            const year = $("input[name='year']").val();
+            if (year < currentYear || year > currentYear + 20) {
+                flag = false;
+                wrong += "Invalid Year.\n";
+            }
+
+            const csc = $("input[name='csc']").val();
+            if(csc.length != 3 || !$.isNumeric(csc)) {
+                flag = false;
+                wrong += "Invalid Security Code.";
+            }
+
+            if(!flag) {
+                alert(wrong);
+                return flag;
+            }
+
+            //Post the order to payment.php
+            $.ajax({
+                type: "POST",
+                url: "includes/payment.php",
+                data: $("#paymentForm").serialize(),
+                success: function() {
+                    alert("Payment Success");
+                    window.location.reload(true);
+                }
+            });
+        })
+
+        //Close the credit payment block and open payment selection block
+        $(".creditBackBtn").click(function(event){
+            event.preventDefault();
+            $(".creditForm").removeClass("expand");
+            $(".creditForm").addClass("contract");
+            $(".paymentSelect").removeClass("contract");
+            $(".paymentSelect").addClass("expand");
         })
     </script>
 </body>
