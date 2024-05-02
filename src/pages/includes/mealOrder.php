@@ -32,7 +32,7 @@ function mealDisplayRow($initial, $meals) {
 }
 
 function readMeals($database) {
-    $query = "SELECT * FROM cisc3003.meals";
+    $query = "SELECT * FROM meals";
     $result = $database->query($query);
 
     $meals = array();
