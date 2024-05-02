@@ -4,7 +4,7 @@
             <img id="logo" src="images/banner.png" alt="banner">
         </a>
         <div id="topMenu">
-            <span><a href="menu.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hide-for-mobile">Home</span></a></span>
+            <span><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hide-for-mobile">Home</span></a></span>
             <span class="hide-for-mobile"><a href="#">News</a></span>
             <span class="hide-for-mobile"><a href="#">Booking</a></span>
             <span class="hide-for-mobile"><a href="order.php" id="orderLink">Order</a></span>
