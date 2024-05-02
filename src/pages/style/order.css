@@ -144,7 +144,7 @@ h2 {
     font-size: 1rem;
     text-align: center;
     pointer-events: none;
-    width: 1em;
+    width: 1.25em;
     border: 0;
 }
 
@@ -162,4 +162,53 @@ h2 {
 
 .meal-cart input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
+}
+
+.addCart {
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 39.9375em) {
+    .addCart {
+        justify-content: center;
+    }
+}
+
+.formBtn {
+    color: #202020;
+    background-color: #ff6200;
+    width: 9rem;
+    height: 2.75rem;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    line-height: 2.75rem;
+    text-align: center;
+}
+
+.formBtn:not(:last-child) {
+    margin-right: 0.75rem;
+}
+
+.formBtn:hover {
+    transform: scale(1.05);
+}
+
+.formBtn:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+.formBtn a {
+    color: #202020;
+}
+
+.formBtn:active a {
+    color: #151515;
 }
