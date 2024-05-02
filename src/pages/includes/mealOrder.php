@@ -107,7 +107,7 @@ function displayPayment($meals) {
                 </tr>
             </tfoot>
         </table>
-        <input type='hidden' name='order' value='".$serialize."'>
+        <input type='hidden' name='order_content' value='".$serialize."'>
         <input type='hidden' name='total' value=".$total.">
         ";
     }

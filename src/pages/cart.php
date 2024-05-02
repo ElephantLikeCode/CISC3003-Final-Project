@@ -43,11 +43,11 @@
 
     <section class="paymentDisplay">
         <h2 class="pageTitle">Shopping Cart</h2>
-        <form id="paymentForm" method="post" action="payment.php">
+        <form id="paymentForm" method="post" action="includes/payment.php">
             <?php displayPayment($meals);?>
             <div class="buttonList">
                 <a href="order.php" id="backBtn" class="formBtn">Back to Order</a>
-                <input id="confirmBtn" type="submit" class="formBtn" value="Confirm">
+                <a id="confirmBtn" class="formBtn">Confirm</a>
             </div>
         </form>
     </section>
@@ -66,6 +66,15 @@
                 alert("Your shopping cart is empty.");
                 return false;
             }
+
+            $.ajax({
+                type: "POST",
+                url: "includes/payment.php",
+                data: $("#paymentForm").serialize(),
+                success: function() {
+                    alert($("#paymentForm").serialize());
+                }
+            })
         });
     </script>
 </body>
