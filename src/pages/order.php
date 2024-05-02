@@ -6,9 +6,8 @@
     $servername = "localhost";
     $username = "root";
     $password = "sqHinL_2003717"; //Your database password here
-    $dbname = "cisc3003";
 
-    $database = new mysqli($servername, $username, $password, $dbname);
+    $database = new mysqli($servername, $username, $password);
 
     if ($database->connect_error) {
         die("Connection failed: " . $database->connect_error);
