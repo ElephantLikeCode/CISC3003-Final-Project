@@ -112,9 +112,8 @@ body.paying {
 .paymentSelect {
     background-color: #FFFFFF;
     position: relative;
-    padding: 1rem;
     font-size: 1.25rem;
-    width: 100%;
+    padding: 1rem;
     border-radius: 0.5rem;
     display: none;
 }
@@ -182,115 +181,204 @@ body.paying {
     background-color: #cf4f00;
 }
 
-/* CSS for credit card payment block */
-    .useCredit {
-        position: fixed;
-        width: 30%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        z-index: 2;
+@media (max-width: 64em) {
+    .paymentSelect {
+        font-size: 1.125rem;
     }
 
-    .creditForm {
-        background-color: #FFFFFF;
-        position: relative;
-        font-size: 1.25rem;
-        padding: 1rem;
-        width: 100%;
-        border-radius: 0.5rem;
-        display: none;
+    .selectMethod {
+        font-size: 1.3125rem;
     }
 
-    .expand.creditForm {
-        display: inherit;
+    .backBtn {
+        width: 8.75rem;
+        height: 2.125rem;
+        line-height: 2.125rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .selectBox {
+        width: 75%;
     }
 
-    .creditCompany {
-        margin-bottom: 1rem;
-        text-align: center;
+    .paymentSelect {
+        font-size: 1rem;
     }
 
-    .creditCompany img {
-        vertical-align: middle;
-        margin: 0 0.25rem;
+    .selectMethod {
+        font-size: 1.125rem;
     }
 
-    .creditCompany img:first-child {
-        height: 1.25rem;
-    }
-
-    .creditCompany img:nth-child(2) {
-        height: 1.75rem;
-    }
-
-    .creditCompany img:last-child {
+    .backBtn {
+        width: 7.5rem;
         height: 2rem;
+        line-height: 2rem;
+        font-size: 0.875rem;
     }
+}
 
-    .creditForm label {
-        font-weight: 600;
+/* CSS for credit card payment block */
+.useCredit {
+    position: fixed;
+    width: 45%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.creditForm {
+    background-color: #FFFFFF;
+    position: relative;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.expand.creditForm {
+    display: inherit;
+}
+
+.creditCompany {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.creditCompany img {
+    vertical-align: middle;
+    margin: 0 0.25rem;
+}
+
+.creditCompany img:first-child {
+    height: 1.25rem;
+}
+
+.creditCompany img:nth-child(2) {
+    height: 1.75rem;
+}
+
+.creditCompany img:last-child {
+    height: 2rem;
+}
+
+.creditForm label {
+    font-weight: 600;
+}
+
+.creditForm input:not(input[type="submit"]) {
+    display: block;
+    font-size: 1rem;
+    font-family: "Maven Pro", sans-serif;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.creditForm input:not(input[type="submit"]):focus {
+    outline: none;
+}
+
+.creditForm input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.row .csc {
+    margin-left: 4rem;
+}
+
+.creditBackBtn, .creditPayBtn {
+    display: block;
+    color: #202020;
+    background-color: #ff6200;
+    width: 8rem;
+    height: 2.25rem;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    line-height: 2.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.creditPayBtn {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.creditBackBtn:hover, .creditPayBtn:hover {
+    transform: scale(1.015);
+}
+
+.creditBackBtn:active, .creditPayBtn:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+@media (max-width: 64em) {
+    .creditForm {
+        font-size: 1.125rem;
     }
 
     .creditForm input:not(input[type="submit"]) {
-        display: block;
+        font-size: 0.875rem;
+        height: 1.75rem;
+    }
+
+    .creditPayBtn, .creditBackBtn {
+        width: 7rem;
+        height: 2.125rem;
+        line-height: 2.125rem;
         font-size: 1rem;
-        font-family: "Maven Pro", sans-serif;
-        width: 100%;
-        height: 2rem;
-        margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .useCredit {
+        width: 75%;
     }
 
-    .creditForm input:not(input[type="submit"]):focus {
-        outline: none;
+    .creditForm {
+        font-size: 1rem;
     }
 
-    .creditForm input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    .row {
-        display: grid;
-        grid-template-columns: 1fr 1fr 3fr;
-    }
-
-    .row .csc {
-        margin-left: 4rem;
-    }
-
-    .creditBackBtn, .creditPayBtn {
-        display: block;
-        color: #202020;
-        background-color: #ff6200;
-        width: 8rem;
-        height: 2.25rem;
-        font-family: "Maven Pro", sans-serif;
-        font-size: 1.125rem;
-        font-weight: 600;
-        border: 0;
-        border-radius: 1rem;
-        cursor: pointer;
-        transition: transform 200ms ease-in-out;
-        line-height: 2.25rem;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .creditPayBtn {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .creditBackBtn:hover, .creditPayBtn:hover {
-        transform: scale(1.015);
+    .creditCompany img:first-child {
+        height: 1rem;
     }
     
-    .creditBackBtn:active, .creditPayBtn:active {
-        color: #151515;
-        background-color: #cf4f00;
+    .creditCompany img:nth-child(2) {
+        height: 1.5rem;
     }
+    
+    .creditCompany img:last-child {
+        height: 1.75rem;
+    }
+
+    .creditForm input:not(input[type="submit"]) {
+        font-size: 0.75rem;
+        height: 1.5rem;
+    }
+
+    .creditPayBtn, .creditBackBtn {
+        width: 6rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 0.875rem;
+    }
+}
 
 /* CSS for payment table */
 .paymentDisplay {

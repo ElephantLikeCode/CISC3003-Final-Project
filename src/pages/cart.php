@@ -72,7 +72,7 @@
                 </div>
                 <div class="year">
                     <label>Year</label>
-                    <input type="number" name="year" placeholder="YY" required>
+                    <input type="number" name="year" placeholder="YYYY" required>
                 </div>
                 <div class="csc">
                     <label>CSC</label>
@@ -124,7 +124,6 @@
         //Start the payment procedure
         $(".pay").click(function(event){
             event.preventDefault();
-            $("#paymentForm").submit();
 
             var total = $("input[name='total']").serialize();
             const accountInfo = document.cookie.indexOf("; accountInfo=");
