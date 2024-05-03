@@ -1,0 +1,150 @@
+.detail {
+    color: #3d3d3d;
+    background-color: #fffaf2;
+    padding: 2rem 2.5rem;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+@media (max-width: 40em) {
+    .flex-container {
+        display: block;
+    }
+}
+
+.detail-image {
+    width: 40rem;
+    min-width: 350px;
+    overflow: hidden;
+}
+
+@media (max-width: 40em) {
+    .detail-image {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.detail-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.detail-title {
+    color: #9b5f5f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.detail-desc {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.detail-nutri {
+    color: #3d3d3d;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.detail-nutri-title {
+    color: #9b5f5f;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.detail-nutri td {
+    padding: 0.15rem 1rem;
+}
+
+.detail-price {
+    color: #202020;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 64em) {
+    .detail-title {
+        font-size: 2rem;
+    }
+    
+    .detail-desc {
+        font-size: 1.125rem;
+    }
+    
+    .detail-price {
+        font-size: 1.25rem;
+    }    
+}
+
+/* CSS for order input */
+.detail-order {
+    color: #3d3d3d;
+    font-size: 1.25rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media (max-width: 64em) {
+    .detail-order {
+        font-size: 1.125rem;
+    }   
+}
+
+@media (max-width: 40em) {
+    .detail-order {
+        font-size: 1rem;
+    }   
+}
+
+.fa {
+    color: #ff6200;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.fa:hover {
+    transform: scale(1.15);
+}
+
+.fa:active {
+    transform: scale(0.875);
+}
+
+.detail-num {
+    color: #3d3d3d;
+    font-size: 1.125rem;
+    font-family: "Maven Pro", sans-serif;
+    text-align: center;
+    width: 2.25rem;
+    height: 1.5rem;
+    pointer-events: none;
+    margin: 0 0.5rem;
+}
+
+.detail-num::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@media (max-width: 64em) {
+    .detail-num {
+        font-size: 1rem;
+        width: 2rem;
+        height: 1.25rem;
+    }   
+}
+
+@media (max-width: 40em) {
+    .detail-num {
+        font-size: 0.875rem;
+        width: 1.75rem;
+        height: 1rem;
+    }   
+}

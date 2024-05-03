@@ -82,24 +82,22 @@
         });
 
         $(".addBtn").click(function(){
-            var num = parseInt($(this).prev().val()) + 1;
-            $(this).prev().val(num);
+            $(this).prev()[0].stepUp();
             $.ajax({
                 type: "POST",
                 url: "includes/updateCart.php",
                 data: $("#orderForm").serialize()
             })
-        })
+        });
 
         $(".dropBtn").click(function(){
-            var num = parseInt($(this).next().val()) - 1;
-            $(this).next().val(num);
+            $(this).next()[0].stepDown();
             $.ajax({
                 type: "POST",
                 url: "includes/updateCart.php",
                 data: $("#orderForm").serialize()
             })
-        })
+        });
     </script>
 </body>
 </html>

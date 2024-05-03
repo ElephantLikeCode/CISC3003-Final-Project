@@ -13,6 +13,7 @@ function mealDisplaySingle($i, $meals) {
             <div class='meal-price'>MOP ".
                 $meals[$i]['price'].
             "</div>
+            <a class='meal-more' href='mealDetail.php?meal_id=".($i+1)."'>View Detail</a>
         </div>
         <div class='meal-cart'>
             <i class='fa fa-minus-circle dropBtn' aria-hidden='true'></i>

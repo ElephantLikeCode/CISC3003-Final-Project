@@ -70,7 +70,7 @@ h2 {
 }
 
 .meal-content {
-    margin: 0.75rem 1rem;
+    margin: 0.75rem 1rem 0.25rem;
 }
 
 .meal-title {
@@ -90,6 +90,16 @@ h2 {
     font-weight: 700;
     font-size: 1.25rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.meal-more {
+    font-size: 0.9375rem;
+    transition: color 150ms ease-in-out;
+}
+
+.meal-more:hover {
+    color: #ff6200;
 }
 
 @media (max-width: 63.9375em) {
@@ -102,6 +112,9 @@ h2 {
     .meal-price {
         font-size: 1.125rem;
     }
+    .meal-more {
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 39.9375em) {
@@ -113,6 +126,9 @@ h2 {
     }
     .meal-price {
         font-size: 1rem;
+    }
+    .meal-more {
+        font-size: 0.75rem;
     }
 }
 
@@ -130,11 +146,15 @@ h2 {
     margin: 0 0.25rem;
     transition: transform 200ms ease-in-out;
     color: #ff6200;
+    cursor: pointer;
 }
 
 .meal-cart .fa:hover {
-    cursor: pointer;
     transform: scale(1.25);
+}
+
+.meal-cart .fa:active {
+    transform: scale(0.875);
 }
 
 .meal-cart input[type=number] {
