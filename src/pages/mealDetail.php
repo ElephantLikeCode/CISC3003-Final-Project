@@ -58,11 +58,21 @@
                 <div class="detail-title"><?php echo $title;?></div>
                 <div class="detail-desc"><?php echo $desc;?></div>
                 <table class="detail-nutri">
-                    <h3 class="detail-nutri-title">Nutrition Information:</h3>
-                    <tr><td>Calories</td><td><?php echo $nutri["cal"];?>kcal</td></tr>
-                    <tr><td>Protein</td><td><?php echo $nutri["protein"];?>g</td></tr>
-                    <tr><td>Carbohydrates</td><td><?php echo $nutri["carbs"];?>g</td></tr>
-                    <tr><td>Fat</td><td><?php echo $nutri["fat"];?>g</td></tr>
+                    <?php if (!empty($nutri)):?>
+                        <h3 class="detail-nutri-title">Nutrition Information:</h3>
+                        <?php if (isset($nutri["cal"])):?>
+                            <tr><td>Calories</td><td><?php echo $nutri["cal"];?>kcal</td></tr>
+                        <?php endif;?>
+                        <?php if (isset($nutri["protein"])):?>
+                            <tr><td>Protein</td><td><?php echo $nutri["protein"];?>g</td></tr>
+                        <?php endif;?>
+                        <?php if (isset($nutri["carbs"])):?>
+                            <tr><td>Carbohydrates</td><td><?php echo $nutri["carbs"];?>g</td></tr>
+                        <?php endif;?>
+                        <?php if (isset($nutri["fat"])):?>
+                            <tr><td>Fat</td><td><?php echo $nutri["fat"];?>g</td></tr>
+                        <?php endif;?>
+                    <?php endif;?>
                 </table>
                 <div class="detail-price">MOP <?php echo number_format($price, 1)?></div>
                 <div class="detail-order">
@@ -78,6 +88,19 @@
             </div>
         </div>
     </form>
+    
+    <section class="comment">
+        <div class="hr"></div>
+        <h2 class="comment-title">Comments</h2>
+        <textarea class="comment-input" name="comment" placeholder="Write your comment here..."></textarea>
+        <div class="commentBtn">
+            <a href="#" class="comment-submitBtn">Comment</a>
+        </div>
+        <div class="comment-display">
+            <div class="comment-block"><div class="comment-block-title">test</div></div>
+            <div class="comment-block"><div class="comment-block-title">test</div></div>
+        </div>
+    </section>
 
     <?php include "includes/footer.php";?>
 
