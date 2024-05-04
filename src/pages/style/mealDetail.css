@@ -188,6 +188,10 @@
     outline: none;
 }
 
+#input-title {
+    height: 2rem;
+}
+
 .commentBtn {
     display: flex;
     justify-content: end;
