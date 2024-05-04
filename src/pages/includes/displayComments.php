@@ -26,10 +26,10 @@
         </div>
         <div class="comment-block-info">
             <div class="comment-block-name">
-                User name: <?php echo $row["user_name"];?>
+                <?php echo $row["user_name"];?>
             </div>
             <div class="comment-block-date">
-                Date: <?php echo date("Y-m-d H:i", $row["timestamp"]);?>
+                <?php echo date("Y-m-d H:i", $row["timestamp"]);?>
             </div>
         </div>
         <div class="comment-block-text">
