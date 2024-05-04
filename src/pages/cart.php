@@ -2,6 +2,8 @@
     session_start();
     include "includes/mealOrder.php";
 
+    date_default_timezone_set("Asia/Macau");
+
     //Connect to the database
     $servername = "localhost";
     $username = "root";
