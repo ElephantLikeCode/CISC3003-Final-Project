@@ -1,7 +1,8 @@
 .detail {
     color: #3d3d3d;
     background-color: #fffaf2;
-    padding: 2rem 2.5rem 0;
+    padding: 2rem 2.5rem;
+    margin-bottom: 0;
 }
 
 .flex-container {
@@ -206,7 +207,7 @@
     transition: transform 200ms ease-in-out;
     line-height: 2.5rem;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
     margin-right: 2.5rem;
 }
 
@@ -237,6 +238,8 @@
 .comment-block {
     background-color: #ffffff;
     padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.25);
 }
 
 .comment-block-title {

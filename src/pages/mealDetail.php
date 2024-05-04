@@ -30,6 +30,8 @@
     $num = $_SESSION["cart"]["meal".$id-1];
 
     $database->close();
+
+    print_r(time());
 ?>
 
 <!DOCTYPE html>
@@ -97,8 +99,6 @@
             <a href="#" class="comment-submitBtn">Comment</a>
         </div>
         <div class="comment-display">
-            <div class="comment-block"><div class="comment-block-title">test</div></div>
-            <div class="comment-block"><div class="comment-block-title">test</div></div>
         </div>
     </section>
 
@@ -122,6 +122,8 @@
                 data: $(".detail").serialize()
             })
         });
+
+        $(".comment-display").load("includes/displayComments.php");
     </script>
 </body>
 </html>
