@@ -80,6 +80,7 @@
                     <input class="detail-num" type="number" name="<?php echo "meal".($id-1);?>" min="0" max="99" value="<?php echo $num;?>">
                     <i class='fa fa-plus-circle addBtn' aria-hidden='true'></i>
                 </div>
+                <a href="order.php" class="backBtn">Back to Order</a>
                 <?php
                     for ($i = 0; $i < count($_SESSION["cart"]); $i++){
                         if ($i != $id-1) echo "<input type='hidden' class='order' name='meal".$i."' value='".$_SESSION["cart"]["meal".$i]."'>";

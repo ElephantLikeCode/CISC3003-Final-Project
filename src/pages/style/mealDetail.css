@@ -2,7 +2,7 @@
     color: #3d3d3d;
     background-color: #fffaf2;
     padding: 2rem 2.5rem;
-    margin-bottom: 0;
+    margin-bottom: -1px;
 }
 
 .flex-container {
@@ -26,6 +26,7 @@
 @media (max-width: 40em) {
     .detail-image {
         width: 100%;
+        min-width: 100%;
         overflow: hidden;
     }
 }
@@ -78,9 +79,37 @@
     .detail-desc {
         font-size: 1.125rem;
     }
+
+    .detail-nutri-title {
+        font-size: 1.1875rem;
+    }
     
     .detail-price {
         font-size: 1.25rem;
+    }    
+}
+
+@media (max-width: 40em) {
+    .detail-title {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
+    }
+    
+    .detail-desc {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .detail-nutri {
+        margin-bottom: 0.5rem;
+    }
+
+    .detail-nutri-title {
+        font-size: 1.125rem;
+    }
+    
+    .detail-price {
+        font-size: 1.125rem;
     }    
 }
 
@@ -151,6 +180,51 @@
     }   
 }
 
+.backBtn {
+    display: block;
+    color: #202020;
+    background-color: #ff6200;
+    width: 9.5rem;
+    height: 2.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    line-height: 2.25rem;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+}
+
+.backBtn:hover {
+    transform: scale(1.015);
+}
+
+.backBtn:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+@media (max-width: 64em) {
+    .backBtn {
+        width: 8.75rem;
+        height: 2.125rem;
+        line-height: 2.125rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .backBtn {
+        width: 7.5rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 0.875rem;
+    }
+}
+
 /* CSS for comment block */
 .comment {
     background-color: #fffaf2;
@@ -192,6 +266,26 @@
     height: 2rem;
 }
 
+@media (max-width: 64em) {
+    .comment-title {
+        font-size: 1.5rem;
+    }
+
+    .comment-input {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .comment-title {
+        font-size: 1.25rem;
+    }
+
+    .comment-input {
+        font-size: 0.875rem;
+    }
+}
+
 .commentBtn {
     display: flex;
     justify-content: end;
@@ -215,6 +309,15 @@
     margin-right: 2.5rem;
 }
 
+@media (max-width: 40em) {
+    .comment-submitBtn {
+        font-size: 0.875rem;
+        width: 6rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+}
+
 .comment-submitBtn:hover {
     transform: scale(1.05);
 }
@@ -233,6 +336,7 @@
 }
 
 .comment-display {
+    color: #3d3d3d;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: left;
@@ -250,4 +354,55 @@
     color: #9b5f5f;
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+.comment-block-info {
+    color: #6d6d6d;
+    display: flex;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.comment-block-text {
+    font-size: 1rem;
+}
+
+@media (max-width: 64em) {
+    .comment-block-title {
+        font-size: 1.25rem;
+    }
+
+    .comment-block-info {
+        display: block;
+        font-size: 0.8125rem;
+    }
+
+    .comment-block-text {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .comment-display {
+        display: block;
+    }
+
+    .comment-block {
+        margin-bottom: 0.75rem;
+    }
+
+    .comment-block-title {
+        font-size: 1.125rem;
+    }
+
+    .comment-block-info {
+        display: block;
+        font-size: 0.75rem;
+    }
+
+    .comment-block-text {
+        font-size: 0.875rem;
+    }
 }
