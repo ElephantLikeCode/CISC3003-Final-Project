@@ -2,7 +2,7 @@
 
 ## Team Information
 
-- **TEAM03**
+### **TEAM03**
 
 - **PAIR22**
   - DC226319 Ted, TAN HONGYE
