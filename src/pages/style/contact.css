@@ -1,0 +1,35 @@
+.contact-info {
+    color: #3d3d3d;
+    background-color: #fffaf2;
+    width: 100%;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+}
+
+.contact-info td {
+    padding: 0.5rem 0;
+}
+
+.fa {
+    margin-right: 1rem;
+}
+
+@media (max-width: 64em) {
+    .contact-info {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 40em) {
+    .contact-info {
+        font-size: 1rem;
+    }
+}
+
+.contact-info a {
+    transition: color 150ms ease-in-out;
+}
+
+.contact-info a:hover {
+    color: #ff6200;
+}
