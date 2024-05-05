@@ -34,6 +34,7 @@ h2 {
 .meal {
     background-color: #ffedd1;
     border-radius: 1rem;
+    position: relative;
     overflow: hidden;
     transition: transform 200ms ease-in-out;
     padding-bottom: 2rem;
