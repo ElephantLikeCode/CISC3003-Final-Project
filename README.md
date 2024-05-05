@@ -1,52 +1,119 @@
-# PLATFORM FOR HEALTH CLUBS
+A Healthy Club Online Platform 
+
+By 
+
  
-### 1. Meal ordering system (fitness nutritional meals)
-- Menu Browsing: Users can browse the details of various fitness and nutritional meals, including ingredients, nutritional content and price.
-- Online ordering: Users can select meals, add them to the shopping cart and make online payment.
-- Order Management: Users can view and manage their order history, including order status and delivery tracking.
 
-### 2. Offline Fitness Facility Reservation Service
-- Facility display: Detailed display of various facilities in the health club, such as gyms, swimming pools, etc.
-- Reservation Function: Users can view the available time slots of the facilities and make reservations.
-- Reservation Management: Users can manage their reservation, including modifying or cancelling the reservation.
+ TEAM03  
 
-### 3. Fitness Membership Management System
-- Member Registration and Login: Users can register as a member and manage their information through account login.
-- Membership Information Management: Members can update their personal information, including contact information, fitness goals, and so on.
-- Membership rights and benefits: Show the unique rights and benefits of the members, such as discounts, exclusive activities and so on.
+ 
 
-### 4. Online Fitness Tutorials
-- Classification of tutorials: Tutorials are categorised according to difficulty and type, making it easy for users to choose.
-- Video Playback: Provide high-quality video tutorials and support playback control functions, such as pause and replay.
-- Interaction: Users can comment or ask questions under the tutorials to interact with the trainer or other members.
+ PAIR22 
 
-### 5. Responsive Web Design
-- Adaptive Layout: Ensure the webpage can automatically adjust the layout on various devices to provide a good browsing experience.
-- Fast loading: Optimise page elements to ensure fast loading and improve user satisfaction.
-- Ease of Use: Design a clean and intuitive user interface to make function operation simple and easy to understand.
+DC226319 Ted, TAN HONGYE 
 
-# 点单系统
-### 1. 点单系统 (健身营养餐单)
-- 菜单浏览:用户能够浏览各式各样健身及营养餐的详细资料，包括材料、营养资料及价格
-- 网上点单:用户能够把所要的餐点加入购物车并网上付款
-- 订单管理:用户能够查看并管理帐户中的订单记录，包括订单状态及追踪外送进度
+DC125931 David, LI WAIIAT 
 
-### 2. 线下健身设施预约服务
-- 设施展示：展示不同健身俱乐部的详细内容，例如健身房、游泳池等等
-- 预约功能：用户可以查看设施的可用时段并进行预订
-- 预约管理：用户可以管理自己的预约，包括修改及取消预约
+ 
 
-### 3. 健身会员管理系统
-- 会员注册及登入：透过登入帐户，用户可以注册成为会员及管理个人资讯
-- 会员资讯管理：会员可以更新个人资讯，包括联络方法、健身目标等等
-- 会员权益及优惠：展示独特的会员权益及优惠，例如折扣、独家活动等等
+PAIR07 
 
-### 4. 线上健身教程
-- 教程分类：教程依照难度和类型分类，以便使用者选择
-- 视频回放：提供高质量视频教程及支援控制回放功能，例如暂停及重播
-- 用户互动：可以在教程下评论或提问，与培训师或其他会员互动
+DC125222 Victor, LEE CHEOK HIN 
 
-### 5. 响应式网页设计
-- 自适应布局：确保网页能够依照不同设备来自动调整布局来提供良好的浏览体验
-- 快速载入：最佳化页面元素以确保快速载入及提升用户满意度
-- 易用性：设计一个简洁且直觉的用户介面来使操作简单明了
+DC229567 Harry, SUN SHENGHE 
+
+ 
+
+PAIR01 
+
+DC229377,  CHEN JING 
+
+DC228011, LIU YUCHEN 
+
+  
+
+2024 
+
+  
+
+CISC3003 Course Team Project Proposal 
+
+Computer Science of FST 
+
+University of Macau 
+
+ 
+
+Project Background: 
+
+As awareness of health and fitness grows, more people are paying attention to regular exercise and healthy eating. However, the fast pace of modern life makes it challenging for many to consistently visit the gym or prepare healthy meals due to time and location constraints. An online platform that integrates fitness tutorials, healthy meal planning, and community interaction is emerging as a solution to provide convenient and quick health management tools for users. 
+
+Furthermore, with advancements in technology, people are increasingly accustomed to using digital solutions to manage their daily lives and health. Therefore, developing a fully functional website that operates well on any device will effectively meet market demands and help users better achieve their health goals. 
+
+ 
+
+Project Objectives: 
+
+Create a fully functional website: This site will offer online fitness tutorials, customized healthy meal planning services, and a community interaction platform, accessible on any device. 
+
+Increase user engagement: Enhance user engagement and retention through interactive features such as comments, sharing, and personalized recommendations. 
+
+Expand service range: Attract a broader user base, including not only active gym-goers but also those who prefer to exercise at home. 
+
+ 
+
+Project Scope For Solutions of Objective: 
+
+The platform will consist of the following key components: 
+
+Meal Ordering System: A digital menu for fitness nutritional meals, including online ordering and order management capabilities. 
+
+Offline Fitness Facility Reservation Service: An interface for users to view, book, and manage reservations for various club facilities. 
+
+Fitness Membership Management System: A system for handling member registrations, logins, and personal information updates, along with displaying membership benefits. 
+
+Online Fitness Tutorials: A repository of categorized fitness tutorials with video playback and interactive features. 
+
+Responsive Web Design: An adaptive layout that ensures a seamless browsing experience across different devices. 
+
+ 
+
+ 
+
+Features and Functionalities: 
+
+Meal Ordering System 
+Menu Browsing: Users can explore meals with details like ingredients, nutritional content, and pricing. 
+Online Ordering: A shopping cart feature with secure online payment options. 
+Order Management: An interface to view and manage order history, track order status, and delivery. 
+ 
+
+Offline Fitness Facility Reservation Service 
+Facility Display: Detailed visuals and descriptions of facilities such as gyms and pools. 
+Reservation Function: Calendar-based booking system showing available time slots. 
+Reservation Management: Options to modify or cancel bookings as needed. 
+ 
+
+Fitness Membership Management System 
+Member Registration and Login: Secure sign-up and login process. 
+Membership Information Management: Tools for members to update their profiles and fitness goals. 
+Membership Rights and Benefits: Display of exclusive member benefits like discounts and special activities. 
+ 
+
+Online Fitness Tutorials 
+Classification of Tutorials: Tutorials sorted by difficulty and type. 
+Video Playback: High-quality streaming with user-friendly playback controls. 
+Interaction: Features for users to comment and interact with trainers and other members. 
+Responsive Web Design 
+Adaptive Layout: Dynamic adjustment of the webpage layout to fit various devices. 
+Fast Loading: Optimization of page elements for quick loading times. 
+Ease of Use: Intuitive user interface design for straightforward navigation and operation. 
+ 
+
+Conclusion: 
+
+In summary, this project proposal aims to solve the time and location constraints people encounter in health and fitness in modern life by building a comprehensive online health management platform. By integrating online fitness tutorials, customized healthy meal planning services and a community interaction platform, we will not only be able to provide a convenient health management tool, but also be able to engage and serve a wider user base. The platform will utilize the latest technology to ensure a smooth user experience, whether accessed via computer or mobile device. We look forward to helping users achieve their health goals more effectively through this project, while increasing user engagement and loyalty, leading to long-term growth and success for the company. 
+
+ 
+
+ 
