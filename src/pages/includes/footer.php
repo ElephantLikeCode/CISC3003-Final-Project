@@ -23,20 +23,18 @@
 			</div>
 			
 			<div class="footer_links col1">
-				<a href="menu.php">Home</a>
-				<a href="#">News</a>
-				<a href="#">Booking</a>
-                <a href="#">Order</a>
+				<a href="index.php">Home</a>
+				<a href="news.php">News</a>
+				<a href="booking.php">Booking</a>
 			</div>
             
 			<div class="footer_links col2">
-				<a href="#">Something</a>
-                <a href="#">Something</a>
-                <a href="#">Something</a>
+				<a href="order.php">Order</a>
+                <a href="contact.php">Contact</a>
 			</div>
 			
 			<div class="footer_cta">
-                <a href="pairProfile.html" class="button">JOIN US NOW!</a>
+                <a href="#" class="button">JOIN US NOW!</a>
             </div>
             
             <div class="footer_copyright">
