@@ -17,7 +17,7 @@
     <?php
     session_start();
     if($_SESSION['result']==='false'){
-        echo "<h1 style='font-size: xx-large'>The time slot is already booked!</h1>
+        echo "<h1 style='font-size: xxx-large'>The time slot is already booked!</h1>
                 <button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>";
     }
     else{
