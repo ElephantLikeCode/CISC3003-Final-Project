@@ -48,7 +48,10 @@
     <td>$endTime</td>
 </tr>
 </table>
-<button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>";
+<button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>n  
+
+
+";
         session_destroy();
     }
     ?>
