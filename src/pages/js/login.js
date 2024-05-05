@@ -60,32 +60,40 @@ forms.forEach((form) => {
 
         const clickedButton = event.target.querySelector('button[type="submit"]:focus');
 
-
-
-
         if (clickedButton.id==="send"||clickedButton.id==="send1") {
             const formData = new FormData(form);
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'test.php');
+            xhr.open('POST', 'send.php');
             xhr.onload = function () {
                 if (xhr.status === 200){
-                    clickedButton.disabled = true; // 禁用按钮
-                    clickedButton.classList.add('disabled'); // 添加 disabled 类，改变按钮样式
+                    const response = JSON.parse(xhr.responseText);
+                    const sendresult = response.sendresult;
 
-                    var count = 60; // 倒计时时间（秒）
-                    clickedButton.innerHTML = count + 's'; // 显示初始倒计时时间
+                    if (sendresult===0){
+                        clickedButton.disabled = true; // 禁用按钮
+                        clickedButton.classList.add('disabled'); // 添加 disabled 类，改变按钮样式
 
-                    var timer = setInterval(function() {
-                        count--;
-                        clickedButton.innerHTML = count + 's'; // 更新倒计时时间
+                        var count = 60; // 倒计时时间（秒）
+                        clickedButton.innerHTML = count + 's'; // 显示初始倒计时时间
 
-                        if (count <= 0) {
-                            clearInterval(timer); // 倒计时结束，清除计时器
-                            clickedButton.disabled = false; // 启用按钮
-                            clickedButton.classList.remove('disabled'); // 移除 disabled 类，恢复按钮样式
-                            clickedButton.innerHTML = 'send'; // 恢复按钮文字
-                        }
-                    }, 1000);
+                        var timer = setInterval(function() {
+                            count--;
+                            clickedButton.innerHTML = count + 's'; // 更新倒计时时间
+
+                            if (count <= 0) {
+                                clearInterval(timer); // 倒计时结束，清除计时器
+                                clickedButton.disabled = false; // 启用按钮
+                                clickedButton.classList.remove('disabled'); // 移除 disabled 类，恢复按钮样式
+                                clickedButton.innerHTML = 'send'; // 恢复按钮文字
+                            }
+                        }, 1000);
+                    }
+                    else if(sendresult===1){
+                        showup('Input cannot be empty.');
+                    }
+                    else if(sendresult===2){
+                        showup('Email format error.');
+                    }
                 }
             };
             xhr.send(formData);
