@@ -136,11 +136,13 @@ header {
 
 /*CSS for footer*/
 .footer {
+	
 	color: #3d3d3d;
 	background-color: #cfcfcf;
 	padding: 1.75rem;
 	text-align: center;
 	box-shadow: 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+
 }
 @media (min-width: 64em) {
 	.footer .container {
@@ -359,3 +361,4 @@ header {
 .hamburger-up {
 	animation: hamburger-up 200ms ease-in-out forwards;
 }
+

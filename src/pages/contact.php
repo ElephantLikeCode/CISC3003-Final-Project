@@ -25,7 +25,7 @@
         <tr class="phone">
             <td><i class="fa fa-phone" aria-hidden="true"></i>
             <td><a href="#">+853 1234 5678</a></td>
-        </td>
+        </tr>
 
         <tr class="email">
             <td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>

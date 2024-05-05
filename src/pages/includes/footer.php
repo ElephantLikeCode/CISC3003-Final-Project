@@ -38,7 +38,7 @@
             </div>
             
             <div class="footer_copyright">
-                CISC3003 Web Programming - 2024: Team 07
+                CISC3003 Web Programming - 2024: Team 03
             </div>
 		</div>
 	</footer>
