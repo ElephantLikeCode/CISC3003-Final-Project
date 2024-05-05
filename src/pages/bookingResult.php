@@ -1,7 +1,7 @@
 <?php
     session_start();
     echo $_SESSION['result'];
-    if($_SESSION['result']){
+    if($_SESSION['result']==='false'){
         echo "<h1>The time slot is already booked!</h1>";
     }
     else{
