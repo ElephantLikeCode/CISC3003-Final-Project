@@ -1,0 +1,234 @@
+main {
+    background-color: #fffaf2;
+    padding: 1rem 0.5rem;
+}
+
+form {
+    margin: 1rem 2rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: #9b5f5f;
+}
+
+@media (max-width: 63.9375em) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 39.9375em) {
+    h2 {
+        font-size: 1.87rem;
+    }
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem 0 1.5rem;
+    gap: 2rem
+}
+
+.meal {
+    background-color: #ffedd1;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 200ms ease-in-out;
+    position: relative;
+    padding-bottom: 1rem;
+	font-family: "Maven Pro", sans-serif;
+    box-shadow: 0.15em 0.15em 1em rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 63.9375em) {
+    .flex-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 39.9375em) {
+    .flex-container {
+        display: block;
+    }
+
+    .meal {
+        margin: 1em 0;
+    }
+}
+
+.meal:hover {
+    transform: scale(1.025);
+}
+
+.meal-img {
+    height: 12.5rem;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.meal-content {
+    margin: 0.75rem 1rem 0.25rem;
+}
+
+.meal-title {
+    color: #9b5f5f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.meal-desc {
+    color: #3d3d3d;
+    font-size: 1rem;
+}
+
+.meal-price {
+    color: #202020;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.meal-more {
+    font-size: 0.9375rem;
+    transition: color 150ms ease-in-out;
+}
+
+.meal-more:hover {
+    color: #ff6200;
+}
+
+@media (max-width: 63.9375em) {
+    .meal-title {
+        font-size: 1.375rem;
+    }
+    .meal-desc {
+        font-size: 0.9375rem;
+    }
+    .meal-price {
+        font-size: 1.125rem;
+    }
+    .meal-more {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 39.9375em) {
+    .meal-title {
+        font-size: 1.25rem;
+    }
+    .meal-desc {
+        font-size: 0.875rem;
+    }
+    .meal-price {
+        font-size: 1rem;
+    }
+    .meal-more {
+        font-size: 0.75rem;
+    }
+}
+
+.meal-cart {
+    float: right;
+    vertical-align: middle;
+    margin: 0 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+}
+
+.meal-cart .fa {
+    margin: 0 0.25rem;
+    transition: transform 200ms ease-in-out;
+    color: #ff6200;
+    cursor: pointer;
+}
+
+.meal-cart .fa:hover {
+    transform: scale(1.25);
+}
+
+.meal-cart .fa:active {
+    transform: scale(0.875);
+}
+
+.meal-cart input[type=number] {
+    color: #3d3d3d;
+    background-color: #ffedd1;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    pointer-events: none;
+    width: 1.25em;
+    border: 0;
+}
+
+@media (max-width: 63.9375em) {
+    .meal-cart input[type=number] {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 39.9375em) {
+    .meal-cart input[type=number] {
+        font-size: 0.875rem;
+    }
+}
+
+.meal-cart input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.addCart {
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 39.9375em) {
+    .addCart {
+        justify-content: center;
+    }
+}
+
+.formBtn {
+    color: #202020;
+    background-color: #ff6200;
+    width: 9rem;
+    height: 2.75rem;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    line-height: 2.75rem;
+    text-align: center;
+}
+
+.formBtn:not(:last-child) {
+    margin-right: 0.75rem;
+}
+
+.formBtn:hover {
+    transform: scale(1.05);
+}
+
+.formBtn:active {
+    color: #151515;
+    background-color: #cf4f00;
+}
+
+.formBtn a {
+    color: #202020;
+}
+
+.formBtn:active a {
+    color: #151515;
+}
