@@ -40,7 +40,7 @@ INSERT INTO `meal_comment` (`comment_id`, `meal_id`, `user_name`, `title`, `cont
 
 
 CREATE TABLE `orders` (
-  `order_id` int NOT NULL,
+  `order_id` int NOT NULL AUTO_INCREMENT,
   `user_name` text NOT NULL,
   `total` float NOT NULL,
   `order_content` text NOT NULL,
