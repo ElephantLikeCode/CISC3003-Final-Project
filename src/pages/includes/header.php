@@ -20,6 +20,12 @@
                     <span></span>
                     <span></span>
             </a>
+
+            <div id="hamburgerMenu">
+                <a href="#">News</a>
+                <a href="#">Booking</a>
+                <a href="order.php">Order</a>
+            </div>
         </div>
     </nav>
 </header>
