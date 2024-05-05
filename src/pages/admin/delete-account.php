@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //Include constant.php file here
 $conn = mysqli_connect('localhost', 'root', 'sqHinL_2003717') or die(mysqli_error()); //Database Connection
@@ -26,7 +27,6 @@ if($res == TRUE) {
 else {
     //Failed to delete Account
     //echo "Failed to Delete Account";
-    
     $_SESSION['delete'] = '<div class="error">Failed to Delete Account. Try Again Later.</div>';
     header('location: manage-account.php');
 }

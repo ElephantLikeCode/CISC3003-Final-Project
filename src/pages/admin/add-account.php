@@ -27,19 +27,19 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 				<tr>
 					<td>Full Name: </td>
 					<td>
-						<input type="text" name="email" placeholder="Enter Your Email">
+						<input type="email" name="email" placeholder="Enter Your Email" required>
 					</td>
 				</tr>
 				<tr>
 					<td>Username: </td>
 					<td>
-						<input type="text" name="username" placeholder="Your Username">
+						<input type="text" name="username" placeholder="Your Username" required>
 					</td>
 				</tr>
 				<tr>
 					<td>Password: </td>
 					<td>
-						<input type="password" name="password" placeholder="Your Password">
+						<input type="password" name="password" placeholder="Your Password" required>
 					</td>
 				</tr>
 				
@@ -54,8 +54,6 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 		
 	</div>
 </div>
-
-<?php include('partials/footer.php')?>
 
 <?php 
 //Process the Value from Form and Save it in Database
@@ -101,3 +99,5 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+
+<?php include 'partials/footer.php';?>

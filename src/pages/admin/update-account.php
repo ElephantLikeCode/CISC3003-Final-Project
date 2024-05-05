@@ -46,13 +46,13 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 				<tr>
 					<td>Email: </td>
 					<td>
-						<input type="text" name="email" value="<?php echo $email;?>">
+						<input type="email" name="email" value="<?php echo $email;?>" required>
 					</td>
 				</tr>
 				<tr>
 					<td>Username: </td>
 					<td>
-						<input type="text" name="username" value="<?php echo $username;?>">
+						<input type="text" name="username" value="<?php echo $username;?>" required>
 					</td>
 				</tr>
 				

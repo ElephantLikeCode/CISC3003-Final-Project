@@ -4,7 +4,6 @@ include 'partials/header.php';
 $conn = mysqli_connect('localhost', 'root', 'sqHinL_2003717') or die(mysqli_error()); //Database Connection
 $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 ?>
-
 <div class="main-content">
 	<div class="wrapper">
 		<h1>Manage Admin</h1>
@@ -40,6 +39,11 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 		if(isset($_SESSION['change-pwd'])) {
 		    echo $_SESSION['change-pwd'];
 		    unset($_SESSION['change-pwd']);
+		}
+
+		if(isset($_SESSION['login'])) {
+		    echo $_SESSION['login'];
+		    unset($_SESSION['login']);
 		}
 		?>
 		
@@ -109,3 +113,5 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 <!-- Main Content Section Ends -->
 		
 <?php include 'partials/footer.php'?>
+</body>
+</html>
