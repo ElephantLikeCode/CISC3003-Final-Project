@@ -44,9 +44,10 @@ if (count($_POST) == 4){
     $signup = "INSERT INTO user (Email, user_name, password) VALUES ('".$Email."', '".$user_name."','".$password."')";
 
     if (mysqli_query($conn, $signup)) {
-        $accountInfo=$_POST;
+        $accountInfo["User"]=$_POST["User"];
+        $accountInfo["Email"]=$_POST["Email"];
+        $accountInfo["Password"]=$_POST["Password"];
         setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
-        header('Location: index.php');
         $loginResult=5;//注册成功，将账户信息存入cookie，导向主页面
     } else {
         $loginResult = 2;//邮箱已注册
@@ -66,7 +67,9 @@ else{
         $user_name=$row["user_name"];
 
         if ($storedPassword == $password){
-            $accountInfo = $row;
+            $accountInfo["User"]=$row["user_name"];
+            $accountInfo["Email"]=$_POST["Email"];
+            $accountInfo["Password"]=$_POST["Password"];
             setcookie('accountInfo', json_encode($accountInfo), time() + 3600, '/');
             $loginResult=1;
             //登录成功，储存cookie，导向主页面
