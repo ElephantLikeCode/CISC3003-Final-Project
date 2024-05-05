@@ -17,10 +17,13 @@
             <?php
         $item=$_GET['item'];
         echo "<h1>$item</h1>";
-        echo "<form action='bookingHandler.php?item=".$item."' method='post' id='bookingForm'>";
             ?>
+    <form action='bookingHandler.php' method='post' id='bookingForm'>
         <label>
             Start From
+            <?php
+            echo "<input type='date' name='item' id='start' value='".$item."' style='display:none'>";
+            ?>
             <input type="date" name="startDate">
             <input type="time" name="startTime">
         </label>
