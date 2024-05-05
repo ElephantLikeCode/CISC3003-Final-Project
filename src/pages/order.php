@@ -9,7 +9,6 @@
     $username = "root";
     $password = "sqHinL_2003717"; //Your database password here
     $dbname = "cisc3003";
-
     $database = new mysqli($servername, $username, $password, $dbname);
 
     if ($database->connect_error) {

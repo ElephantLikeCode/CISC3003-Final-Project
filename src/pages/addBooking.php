@@ -17,8 +17,8 @@
             <?php
         $item=$_GET['item'];
         echo "<h1>$item</h1>";
-        echo "<form action='bookingHandler.php?item=".$item."' method='post' id='bookingForm'>";
             ?>
+    <form action='bookingHandler.php' method='post' id='bookingForm'>
         <label>
             Start From
             <input type="date" name="startDate">
