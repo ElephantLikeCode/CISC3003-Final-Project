@@ -59,6 +59,7 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 				<th>S.N.</th>
 				<th>Email</th>
 				<th>Username</th>
+				<th>Is Admin</th>
 				<th>Actions</th>
 			</tr>
 			
@@ -85,6 +86,7 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 			             //Get individual data
 			             $email = $rows['Email'];
 			             $username = $rows['user_name'];
+						 $admin = $rows['isadmin'];
 			             
 			             //Display the value in our table
 			             ?>
@@ -92,6 +94,7 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
             				<td><?php echo $sn++;?>. </td>
             				<td><?php echo $email;?></td>
             				<td><?php echo $username;?></td>
+							<td><?php if($admin) echo "Yes"; else echo "No";?></td>
             				<td>
             					<a href="update-password.php?user=<?php echo $username;?>" class="btn-primary">Change Password</a>
             					<a href="update-account.php?user=<?php echo $username;?>" class="btn-secondary">Update</a>

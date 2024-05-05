@@ -10,7 +10,7 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 <html lang="en">
 	<head>
 		<title>Login - Admin</title>
-		<link rel="stylesheet" href="../css/admin.css">
+		<link rel="stylesheet" href="../style/admin.css">
 	</head>
 	
 	<body>
@@ -71,11 +71,20 @@ if (isset($_POST['submit'])) {
     
     if ($count == 1) {
         //User available and login success
-        $_SESSION['login'] = "<div class='success'>Login Successfully.</div>";
-        $_SESSION['user'] = $username; //To check whether the user is logged in or not and logout with unset it
-        
-        //Redirect to home page/dashboard
-        header('location: manage-account.php');
+		$admin = mysqli_fetch_assoc($res)['isadmin'];
+		if($admin == 1) {
+			$_SESSION['login'] = "<div class='success'>Login Successfully.</div>";
+			$_SESSION['user'] = $username; //To check whether the user is logged in or not and logout with unset it
+			
+			//Redirect to home page/dashboard
+			header('location: manage-account.php');
+		}
+		else {
+			//User not an admin
+			$_SESSION['login'] = "<div class='error text-center'>User is not an Admin.</div>";
+			//Redirect to home page/dashboard
+			header('location: login.php');
+		}
     }
     else {
         //User not available

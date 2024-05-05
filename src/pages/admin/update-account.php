@@ -33,6 +33,7 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
                 
                 $email = $row['Email'];
                 $username = $row['user_name'];
+                $admin = $row['isadmin'];
             }
             else {
                 //Redirect to manage Account page
@@ -53,6 +54,13 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 					<td>Username: </td>
 					<td>
 						<input type="text" name="username" value="<?php echo $username;?>" required>
+					</td>
+				</tr>
+                <tr>
+					<td>Is Admin: </td>
+					<td>
+						<input type="radio" name="admin" value="1" <?php if($admin==1) echo 'checked'?>> Yes
+						<input type="radio" name="admin" value="0" <?php if($admin==0) echo 'checked'?>> No
 					</td>
 				</tr>
 				
@@ -76,11 +84,13 @@ if (isset($_POST['submit'])) {
     $new_username = $_POST['username'];
     $old_username = $_POST['old_username'];
     $email = $_POST['email'];
+    $admin = $_POST['admin'];
     
     //Create a SQL query to update Account
     $sql = "UPDATE user SET
         Email = '$email',
-        user_name = '$new_username'
+        user_name = '$new_username',
+        isadmin = '$admin'
         WHERE user_name = '$old_username'
     ";
     

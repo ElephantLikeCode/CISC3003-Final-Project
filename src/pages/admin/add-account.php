@@ -42,6 +42,13 @@ $db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
 						<input type="password" name="password" placeholder="Your Password" required>
 					</td>
 				</tr>
+				<tr>
+					<td>Is Admin: </td>
+					<td>
+						<input type="radio" name="admin" value="1"> Yes
+						<input type="radio" name="admin" value="0"> No
+					</td>
+				</tr>
 				
 				<tr>
 					<td colspan="2">
@@ -66,13 +73,21 @@ if(isset($_POST['submit'])) {
     //1. Get the Data from Form
     $email = $_POST['email'];
     $username = $_POST['username'];
-    $password = $_POST['password']; //Password Encryption with MD5
+    $password = $_POST['password'];
+	
+	if (isset($_POST['admin'])){
+		$admin = $_POST['admin'];
+	}
+	else {
+		$admin = 0;
+	}
     
     //2. SQL Query to Save the Data into Database
     $sql = "INSERT INTO user SET
         Email = '$email',
         user_name = '$username',
-        password = '$password'
+        password = '$password',
+		isadmin = '$admin'
     ";
     
     //3. Executing Query and Saving Data into Database
