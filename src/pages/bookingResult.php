@@ -1,5 +1,6 @@
 <?php
     session_start();
+    echo $_SESSION['result'];
     if($_SESSION['result']){
         echo "<h1>The time slot is already booked!</h1>";
     }
@@ -25,4 +26,5 @@
     <td>$endTime</td>
 </tr>
 </table>";
+        session_destroy();
     }
