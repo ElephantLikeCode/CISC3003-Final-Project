@@ -5,8 +5,8 @@
         </a>
         <div id="topMenu">
             <span><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hide-for-mobile">Home</span></a></span>
-            <span class="hide-for-mobile"><a href="#">News</a></span>
-            <span class="hide-for-mobile"><a href="#">Booking</a></span>
+            <span class="hide-for-mobile"><a href="news.php">News</a></span>
+            <span class="hide-for-mobile"><a href="booking.php">Booking</a></span>
             <span class="hide-for-mobile"><a href="order.php" id="orderLink">Order</a></span>
             <span><a href="cart.php" id="cartLink"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-for-mobile">Cart</span></a></span>
             <?php if(isset($_COOKIE["accountInfo"])):?>
@@ -20,6 +20,12 @@
                     <span></span>
                     <span></span>
             </a>
+
+            <div id="hamburgerMenu">
+                <a href="news.php">News</a>
+                <a href="booking.php">Booking</a>
+                <a href="order.php">Order</a>
+            </div>
         </div>
     </nav>
 </header>

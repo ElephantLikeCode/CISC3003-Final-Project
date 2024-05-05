@@ -36,7 +36,6 @@ h2 {
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 200ms ease-in-out;
-    position: relative;
     padding-bottom: 2rem;
 	font-family: "Maven Pro", sans-serif;
     box-shadow: 0.15em 0.15em 1em rgba(0, 0, 0, 0.5);
