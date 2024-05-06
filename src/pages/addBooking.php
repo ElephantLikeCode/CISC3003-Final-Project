@@ -127,9 +127,9 @@
                         <td>Start From</td>
                         <td>
                             <?php
-                            echo "<input type='date' name='item' id='start' value='" . $item . "' style='display:none'>";
+                            echo "<input type='text' name='item' id='start' value='" . $item . "' style='display:none'>";
                             ?>
-                            <input type="date" name="startDate">
+                            <input type="date" name="startDate" >
                         </td>
                         <td>
                             <input type="time" name="startTime">

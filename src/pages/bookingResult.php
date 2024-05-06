@@ -17,19 +17,16 @@
     <div style="display: flex; justify-content: center;height: 70vh;align-items: center;flex-flow: column">
     <?php
     session_start();
-    if(!true){
+    if($_SESSION['result']==='false'){
         echo "<h1 style='font-size: xxx-large'>The time slot is already booked!</h1>
-                <button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>";
+                <button onclick='window.open(`booking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>";
     }
     else{
-        /*$startDate=$_SESSION['startDate'];
+        $startDate=$_SESSION['startDate'];
         $startTime=$_SESSION['startTime'];
         $endDate=$_SESSION['endDate'];
-        $endTime=$_SESSION['endTime'];*/
-        $startDate=1;
-        $startTime=2;
-        $endDate=3;
-        $endTime=4;
+        $endTime=$_SESSION['endTime'];
+        $number=$_SESSION['number'];
         echo "<h1 style='font-size: xxx-large'>Booking Successes!</h1><br>
                 <h1 style='font-size: xxx-large'>Time to Do Some Exercise!</h1><br><br><br>";
         echo "
@@ -39,16 +36,17 @@
     <th>startTime</th>
     <th>endDate</th>
     <th>endTime</th>
-    
+    <th>number</th>
 </tr>
     <tr>
     <td>$startDate</td>
     <td>$startTime</td>
     <td>$endDate</td>
     <td>$endTime</td>
+    <td>$number</td>
 </tr>
 </table>
-<button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>n  
+<button onclick='window.open(`addBooking.php?item=meal-title`)' class='beautiful-button' style='margin-top: 5vh;font-size: x-large;padding: 2vh'>Return to book another!</button>
 
 
 ";
