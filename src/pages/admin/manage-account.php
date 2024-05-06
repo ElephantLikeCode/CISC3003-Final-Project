@@ -2,7 +2,7 @@
 include 'partials/header.php';
 
 
-require 'config.php';
+require '../config.php';
 //Connect to the database
 
 $conn = mysqli_connect($servername, $db_username, $db_password) or die(mysqli_error()); //Database Connection
