@@ -1,5 +1,7 @@
 ## You need to insert these data in order to keep the website run correctly
-CREATE DATABASE cisc3003
+CREATE DATABASE cisc3003;
+
+USE cisc3003;
 
 CREATE TABLE `meals` (
   `id` int NOT NULL,
@@ -8,7 +10,7 @@ CREATE TABLE `meals` (
   `image` varchar(45) NOT NULL,
   `price` int NOT NULL,
   PRIMARY KEY (`id`)
-)
+);
 
 
 INSERT INTO `meals` (`id`, `title`, `description`, `image`, `price`) VALUES 
@@ -19,7 +21,7 @@ INSERT INTO `meals` (`id`, `title`, `description`, `image`, `price`) VALUES
 ('5', 'Chilli Turkey Burgers', 'These low-cal homemade lime and chilli turkey burgers will spice up your meal prep game and then some, at only 147kcal per burger.', 'meal5.avif', '68'), 
 ('6', 'Peanut Butter Chicken Curry', 'Peanut butter lovers, this incredible recipe is definitely one to try. Immediately.', 'meal6.avif', '72'), 
 ('7', 'Creamy Lemon & Thyme Chicken', 'You\'ll be looking forward to your next meal with this creamy lemon and thyme chicken waiting for you.', 'meal7.avif', '55'), 
-('8', 'Chicken & Chorizo Paella', 'A summery makeover of the classic chicken and rice meal prep with this traditional Spanish paella.', 'meal8.avif', '58')
+('8', 'Chicken & Chorizo Paella', 'A summery makeover of the classic chicken and rice meal prep with this traditional Spanish paella.', 'meal8.avif', '58');
 
 CREATE TABLE `news` (
   `id` int NOT NULL,
@@ -28,7 +30,7 @@ CREATE TABLE `news` (
   `image` varchar(45) NOT NULL,
   `links` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-)
+);
 
 INSERT INTO `news` (`id`, `title`, `description`, `image`, `links`) VALUES
 ('1', 'Squats', 'Squats are a compound, full-body exercise that is a staple for training the leg muscles. The deeper you squat, the more lung capacity you need, thus enhancing cardiovascular function.', 'gif (1).webp', 'https://youtube.com/shorts/gslEzVggur8?si=Q476sNWri3D_nl0L'), 

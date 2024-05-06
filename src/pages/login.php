@@ -1,9 +1,15 @@
 <?php
-$servername = "localhost";
+
+/* $servername = "localhost";
 $db_username = "root";
-$db_password = "20140304Aa";
+$db_password = "U-MtanWDSRS20040619";
 $dbname = "cisc3003";
 
+$conn = new mysqli($servername, $db_username, $db_password, $dbname); */
+
+
+require 'config.php';
+//Connect to the database
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 $loginResult=1;

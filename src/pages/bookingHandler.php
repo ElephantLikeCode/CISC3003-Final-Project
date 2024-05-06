@@ -8,12 +8,20 @@
     $endDate=$_POST["endDate"];
     $endTimeRequested=strtotime($_POST["endDate"].$_POST["endTime"]);
     $number=$_POST["number"];
-    $servername = "localhost";
+
+
+    /* $servername = "localhost";
     $db_username = "root";
-    $db_password = "65124477";
+    $db_password = "U-MtanWDSRS20040619";
     $dbname = "cisc3003";
+    $conn = new mysqli($servername, $db_username, $db_password, $dbname); */
+
+    require 'config.php';
+    //Connect to the database
+    $database = new mysqli($servername, $db_username, $db_password, $dbname);
+
     $item='test';
-    $conn = new mysqli($servername, $db_username, $db_password, $dbname);
+    
     $query = "SELECT bookingId,startDate,startTime,endDate,endTime from cisc3003.bookingrecord where itemName='".$item."'";
     $result = $conn->query($query);
     $_SESSION["result"]='true';
