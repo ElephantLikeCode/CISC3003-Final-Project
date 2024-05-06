@@ -2,8 +2,9 @@
     include "Login_information_verification.php";
 
     session_start();
-    if(!Login_information_verification()):
+    if(!Login_information_verification()) {
         header("Location: login.php");
+    }
     $startTimeRequested=strtotime($_POST["startDate"].$_POST["startTime"]);
     $startDate=$_POST["startDate"];
     $startTime=$_POST["startTime"];
@@ -13,7 +14,7 @@
     $number=$_POST["number"];
     $servername = "localhost";
     $db_username = "root";
-    $db_password = "65124477";
+    $db_password = "20140304Aa";
     $dbname = "cisc3003";
     $item=$_POST['item'];
     $conn = new mysqli($servername, $db_username, $db_password, $dbname);
