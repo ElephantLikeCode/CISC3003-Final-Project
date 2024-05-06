@@ -11,7 +11,7 @@
 
     $database = new mysqli($servername, $username, $password, $dbname); */
 
-    require 'config.php';
+    require '../config.php';
     //Connect to the database
     $database = new mysqli($servername, $db_username, $db_password, $dbname);
 
