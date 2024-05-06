@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Treadmill`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col2">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Elliptical-Machine`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col3">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Rowing-Machine`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col4">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Spinning-Bike`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Smith-Rack`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col2">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Pull-up-Rack`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col3">
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Supine-Board`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
                 <div class="meal col4">
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                     <div class="meal-cart">
-                        <button onclick="window.open(`addBooking.php?item=meal-title`)" class="beautiful-button">Book Now!</button>
+                        <button onclick="window.open(`addBooking.php?item=Leg-Press-Machine`)" class="beautiful-button">Book Now!</button>
                     </div>
                 </div>
             </div>

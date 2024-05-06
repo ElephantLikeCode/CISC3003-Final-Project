@@ -136,7 +136,7 @@ header {
 
 /*CSS for footer*/
 .footer {
-	
+
 	color: #3d3d3d;
 	background-color: #cfcfcf;
 	padding: 1.75rem;
@@ -361,4 +361,10 @@ header {
 .hamburger-up {
 	animation: hamburger-up 200ms ease-in-out forwards;
 }
+
+.none{
+	display: none;
+}
+
+
 

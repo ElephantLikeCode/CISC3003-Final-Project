@@ -44,6 +44,12 @@
     .intro-content p:not(:last-child) {
         margin-bottom: 0.75rem;
     }
+    #img2{
+        display:none;
+    }
+    #floatText{
+        display: none;
+    }
 }
 @media (max-width: 39.9375em) {
     .xxxLarge{
@@ -55,6 +61,13 @@
     .intro-content p:not(:last-child) {
         margin-bottom: 0.5rem;
     }
+    #img2{
+        display:none;
+    }
+    #floatText{
+        display: none;
+    }
+
 }
 
 .bold{
@@ -65,3 +78,5 @@
 }
 /*bannerColor:CFCFCF
   fontColor:3D3D3D*/
+
+

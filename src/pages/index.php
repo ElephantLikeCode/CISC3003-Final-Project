@@ -20,7 +20,7 @@
     </section>
     <section>
         <div id="intro" class="row center" >
-            <img src="images/fittness.jpg" style="height: 50vh;margin: 5%">
+            <img src="images/fittness.jpg" style="height: 50vh;margin: 5%" id="img2">
             <div class="col center" style="max-width: 60vw">
                 <h1 class="xxxLarge bold" style="margin-bottom: 5%; color: #9B5F5F">Fitness, a way of life</h1>
                 <div class="intro-content">
