@@ -1,10 +1,14 @@
 <?php
+require 'config.php';
+
 function Login_information_verification()
 {
-    $servername = "localhost";
+    /* $servername = "localhost";
     $db_username = "root";
-    $db_password = "20140304Aa";
-    $dbname = "cisc3003";
+    $db_password = "U-MtanWDSRS20040619";
+    $dbname = "cisc3003"; */
+
+    global $servername, $db_username, $db_password, $dbname;
 
     $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 

@@ -1,16 +1,11 @@
 <?php
     session_start();
     include "includes/mealOrder.php";
-
+    
     date_default_timezone_set("Asia/Macau");
-
+    require 'config.php';
     //Connect to the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "20140304Aa"; //Your database password here
-    $dbname = "cisc3003";
-    $database = new mysqli($servername, $username, $password, $dbname);
-
+    $database = new mysqli($servername, $db_username, $db_password, $dbname);
     if ($database->connect_error) {
         die("Connection failed: " . $database->connect_error);
     }

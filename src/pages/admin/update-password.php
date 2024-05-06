@@ -1,7 +1,16 @@
 <?php 
 include 'partials/header.php';
-$conn = mysqli_connect('localhost', 'root', 'sqHinL_2003717') or die(mysqli_error()); //Database Connection
-$db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error());
+
+
+require 'config.php';
+//Connect to the database
+
+$conn = mysqli_connect($servername, $db_username, $db_password) or die(mysqli_error()); //Database Connection
+$db_select = mysqli_select_db($conn, $dbname) or die(mysqli_error());
+
+
+/* $conn = mysqli_connect('localhost', 'root', 'U-MtanWDSRS20040619') or die(mysqli_error()); //Database Connection
+$db_select = mysqli_select_db($conn, 'cisc3003') or die(mysqli_error()); */
 ?>
 
 <div class="main-content">

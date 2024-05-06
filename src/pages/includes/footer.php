@@ -24,7 +24,7 @@
 			
 			<div class="footer_links col1">
 				<a href="index.php">Home</a>
-				<a href="news.php">News</a>
+				<a href="news.php">Tutorials</a>
 				<a href="booking.php">Booking</a>
 			</div>
             
